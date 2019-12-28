@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="JAVA–职业发展 2019Java初识与职业发展 https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1rikoyXGCDB0BKfTB4gkkWg 提取码:osyp –基础 【录制视频】2019Java工具教程https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1zQIiZ19V0Aqhano-bOpNjw 提取码：oy0s 【随堂视频】2019Java入门教程+学习资料【完结】 https:&#x2F;&#x2F;pa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习资料">
+<meta property="og:url" content="http://yoursite.com/2019/12/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="JAVA–职业发展 2019Java初识与职业发展 https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1rikoyXGCDB0BKfTB4gkkWg 提取码:osyp –基础 【录制视频】2019Java工具教程https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1zQIiZ19V0Aqhano-bOpNjw 提取码：oy0s 【随堂视频】2019Java入门教程+学习资料【完结】 https:&#x2F;&#x2F;pa">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-28T05:46:38.690Z">
+<meta property="article:modified_time" content="2019-12-23T06:00:31.166Z">
+<meta property="article:author" content="Forbes-v">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2019/12/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>学习资料 | BLOG</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Notes</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input" id="search-input"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+  
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/Forbes-v" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577461266205&di=1c6b53212223ecf3fd4de5ccdc1e037c&imgtype=0&src=http%3A%2F%2Fwww.17qq.com%2Fimg_qqtouxiang%2F49052337.jpeg">
+      <meta itemprop="name" content="Forbes-v">
+      <meta itemprop="description" content="This is MyBlog  Notes">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          学习资料
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-28 05:46:38" itemprop="dateCreated datePublished" datetime="2019-12-28T05:46:38Z">2019-12-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-23 06:00:31" itemprop="dateModified" datetime="2019-12-23T06:00:31Z">2019-12-23</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h1><p>–职业发展</p>
+<p>2019Java初识与职业发展 <a href="https://pan.baidu.com/s/1rikoyXGCDB0BKfTB4gkkWg" target="_blank" rel="noopener">https://pan.baidu.com/s/1rikoyXGCDB0BKfTB4gkkWg</a> 提取码:osyp</p>
+<p>–基础</p>
+<p>【录制视频】2019Java工具教程<a href="https://pan.baidu.com/s/1zQIiZ19V0Aqhano-bOpNjw" target="_blank" rel="noopener">https://pan.baidu.com/s/1zQIiZ19V0Aqhano-bOpNjw</a> 提取码：oy0s</p>
+<p>【随堂视频】2019Java入门教程+学习资料【完结】 <a href="https://pan.baidu.com/s/1htoLNJUmYQ4RRrA23NJbEg" target="_blank" rel="noopener">https://pan.baidu.com/s/1htoLNJUmYQ4RRrA23NJbEg</a> 提取码：496w</p>
+<p>【录制视频】10天自学Java，轻松掌握Java编程基础<a href="https://pan.baidu.com/s/1kRV1LdGrNnUANkHUHAZQzw" target="_blank" rel="noopener">https://pan.baidu.com/s/1kRV1LdGrNnUANkHUHAZQzw</a> 提取码：16us</p>
+<p>–进阶</p>
+<p>【录制视频】Java教程-Html和CSS基础 <a href="https://pan.baidu.com/s/16joCQ3MRj_J_gXrdzXeqjA" target="_blank" rel="noopener">https://pan.baidu.com/s/16joCQ3MRj_J_gXrdzXeqjA</a> 提取码：qk7z</p>
+<p>【录制视频】Java教程-EasyUI框架入门 <a href="https://pan.baidu.com/s/1OOwfDuoF106odkO11UHDlA" target="_blank" rel="noopener">https://pan.baidu.com/s/1OOwfDuoF106odkO11UHDlA</a> 提取码：ahr3</p>
+<p>【随堂视频】Java教程-Web实战入门<a href="https://pan.baidu.com/s/1O3vFxf80BhgdL8sXzVqV5w" target="_blank" rel="noopener">https://pan.baidu.com/s/1O3vFxf80BhgdL8sXzVqV5w</a> 提取码：yj2t</p>
+<p>【录制视频】Java教程-ElasticSearch6入门 <a href="https://pan.baidu.com/s/1__S02ciZucQuy38I1YPv1A" target="_blank" rel="noopener">https://pan.baidu.com/s/1__S02ciZucQuy38I1YPv1A</a> 提取码：3cga</p>
+<p>【随堂视频】Java教程-Hibernate框架从入门到实战 <a href="https://pan.baidu.com/s/1-AG3azV75POCkmZRE3GesQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1-AG3azV75POCkmZRE3GesQ</a> 提取码：oasw</p>
+<p>【录制视频】Java教程-2天学会spring框架 <a href="https://pan.baidu.com/s/1uK6vTDQDZhSYrMqgdeJzsg" target="_blank" rel="noopener">https://pan.baidu.com/s/1uK6vTDQDZhSYrMqgdeJzsg</a> 提取码：29jj</p>
+<p>【随堂视频】Java教程-3天学会SpringMVC框架 <a href="https://pan.baidu.com/s/1-r9LLdA56xsHuAfUDZc4IQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1-r9LLdA56xsHuAfUDZc4IQ</a> 提取码：psw3</p>
+<p>【随堂视频】Java教程-容灾项目从入门到实战 <a href="https://pan.baidu.com/s/1UeOP55hE-alktAfbUH3ZCw" target="_blank" rel="noopener">https://pan.baidu.com/s/1UeOP55hE-alktAfbUH3ZCw</a> 提取码：vjc0</p>
+<p>【随堂视频】Java教程-Mybatis框架从入门到实战 <a href="https://pan.baidu.com/s/1AwOR4zwY-nrQcMM_b3kRZA" target="_blank" rel="noopener">https://pan.baidu.com/s/1AwOR4zwY-nrQcMM_b3kRZA</a> 提取码：r8vz</p>
+<p>【随堂视频】Java教程-Spring框架实战 <a href="https://pan.baidu.com/s/1rMOa1bsuiovN7fCvN-lYkg" target="_blank" rel="noopener">https://pan.baidu.com/s/1rMOa1bsuiovN7fCvN-lYkg</a> 提取码：gjpq</p>
+<p>【随堂视频】Java教程-Jpa框架实战教程 <a href="https://pan.baidu.com/s/1jTHbHPLmcHbukqbCc6SzPw" target="_blank" rel="noopener">https://pan.baidu.com/s/1jTHbHPLmcHbukqbCc6SzPw</a> 提取码：n0o4</p>
+<p>【随堂视频】Java教程-Maven框架实战教程 <a href="https://pan.baidu.com/s/1kZC7oiCaHaaVp6Q4vJqWhw" target="_blank" rel="noopener">https://pan.baidu.com/s/1kZC7oiCaHaaVp6Q4vJqWhw</a> 提取码：z8gn</p>
+<p>【录制视频】Java教程-Shiro框架从入门到实战 <a href="https://pan.baidu.com/s/1wHE3a-LjwvM4O7I0IY5_1A" target="_blank" rel="noopener">https://pan.baidu.com/s/1wHE3a-LjwvM4O7I0IY5_1A</a> 提取码：50g7</p>
+<p>【随堂视频】Java教程-SSM框架从入门到实战 <a href="https://pan.baidu.com/s/1eqtFOa7N0H1d28RHDzoWFw" target="_blank" rel="noopener">https://pan.baidu.com/s/1eqtFOa7N0H1d28RHDzoWFw</a> 提取码：nib2</p>
+<p>【录制视频】Java教程-自定义框架实战 <a href="https://pan.baidu.com/s/1-4xGToOPbhuUoGp-wuARMA" target="_blank" rel="noopener">https://pan.baidu.com/s/1-4xGToOPbhuUoGp-wuARMA</a> 提取码：wsbg</p>
+<p>–高级</p>
+<p>【录制视频】2019Java微服务架构2.0~最前沿技术精选【】<a href="https://pan.baidu.com/s/1aBJFBt9ZTDr7pY6kfHy7xA" target="_blank" rel="noopener">https://pan.baidu.com/s/1aBJFBt9ZTDr7pY6kfHy7xA</a> 提取码：r6c9</p>
+<p>【录制视频】2019Java教程-Java单体应用 <a href="https://pan.baidu.com/s/1PYRpUSIR8CYLrNQFUz8QRA" target="_blank" rel="noopener">https://pan.baidu.com/s/1PYRpUSIR8CYLrNQFUz8QRA</a> 提取码：xb54</p>
+<p>【录制视频】2019Java教程-Java微服务架构(SpringBoot+SpringCloud) <a href="https://pan.baidu.com/s/1K2t-O5pbFH109vjFA5Vh0w" target="_blank" rel="noopener">https://pan.baidu.com/s/1K2t-O5pbFH109vjFA5Vh0w</a> 提取码：zc0m</p>
+<p>【录制视频】2019Java教程-Java微服务架构(SpringBoot+Dubbo+Zookeeper) <a href="https://pan.baidu.com/s/1zrRwWn11jOQ9EkaXaZ-ldQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1zrRwWn11jOQ9EkaXaZ-ldQ</a> 提取码：31lk</p>
+<p>【录制视频】Java教程-cas单点登录解决方案 <a href="https://pan.baidu.com/s/167q2mTSr0A3k5TnRkbFKIA" target="_blank" rel="noopener">https://pan.baidu.com/s/167q2mTSr0A3k5TnRkbFKIA</a> 提取码：e7ad</p>
+<p>【录制视频】Java教程-dubbo+zookeeper分布式系统架构基础 <a href="https://pan.baidu.com/s/13w5gtlMfkVurZIasYS2IiQ" target="_blank" rel="noopener">https://pan.baidu.com/s/13w5gtlMfkVurZIasYS2IiQ</a> 提取码：lqfw</p>
+<p>【录制视频】Java教程-分布式基础知识点教程 <a href="https://pan.baidu.com/s/1WUrUQaVVhL9uOvF8AyHgRg" target="_blank" rel="noopener">https://pan.baidu.com/s/1WUrUQaVVhL9uOvF8AyHgRg</a> 提取码：qfxa</p>
+<p>【随堂视频】Java教程-互联网金融P2P实战教程 <a href="https://pan.baidu.com/s/1aJZiq5HIkDzhRkm9yO2poA" target="_blank" rel="noopener">https://pan.baidu.com/s/1aJZiq5HIkDzhRkm9yO2poA</a> 提取码：6zge</p>
+<p>【随堂视频】Java教程-自定义ORM、MVC框架实战 <a href="https://pan.baidu.com/s/1YB1poL_Uo6XPqn95mDYRIA" target="_blank" rel="noopener">https://pan.baidu.com/s/1YB1poL_Uo6XPqn95mDYRIA</a> 提取码：286r</p>
+<p>【录制视频】Java教程-一天学会Git视频教程 <a href="https://pan.baidu.com/s/1pPena21qrwx2nrqYoyIXKQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1pPena21qrwx2nrqYoyIXKQ</a> 提取码：fgz6</p>
+<p>【随堂视频】Java教程-一天学会SVN视频教程 <a href="https://pan.baidu.com/s/1pKTRvbnUWx0vncAcqy2BMg" target="_blank" rel="noopener">https://pan.baidu.com/s/1pKTRvbnUWx0vncAcqy2BMg</a> 提取码：jccb</p>
+<p>【录制视频】Java教程-Java微服务架构实战 <a href="https://pan.baidu.com/s/1RQmyl0WgO5PDoWAM5QjqVg" target="_blank" rel="noopener">https://pan.baidu.com/s/1RQmyl0WgO5PDoWAM5QjqVg</a> 提取码：gl4t</p>
+<p>【录制视频】Java教程-SpringBatch批处理实战 <a href="https://pan.baidu.com/s/1abHUlXmCwoHboUsSLjF23w" target="_blank" rel="noopener">https://pan.baidu.com/s/1abHUlXmCwoHboUsSLjF23w</a> 提取码：u2hu</p>
+<p>【录制视频】Java教程-SpringBoot实战 <a href="https://pan.baidu.com/s/1l8LrTvKGGSFtva6HZ-dqIQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1l8LrTvKGGSFtva6HZ-dqIQ</a> 提取码：1p51</p>
+<p>【录制视频】Java教程-SpringCloud全套视频（热门推荐） <a href="https://pan.baidu.com/s/1B2cd-c-xG4g2OG9yR74AUA" target="_blank" rel="noopener">https://pan.baidu.com/s/1B2cd-c-xG4g2OG9yR74AUA</a> 提取码：fe8g</p>
+<p>【录制视频】Java教程-分布式环境搭建教程（热门推荐） <a href="https://pan.baidu.com/s/1EW9tD6ewnLzW3TbfklrmUA" target="_blank" rel="noopener">https://pan.baidu.com/s/1EW9tD6ewnLzW3TbfklrmUA</a> 提取码：j9nx</p>
+<p>【随堂视频】Java教程-详解微信公众号视频教程 <a href="https://pan.baidu.com/s/1KmTAbZtCld7VRVswv2erHw" target="_blank" rel="noopener">https://pan.baidu.com/s/1KmTAbZtCld7VRVswv2erHw</a> 提取码：u1p3</p>
+<p>【随堂视频】Java教程-详解微信支付入门教程 <a href="https://pan.baidu.com/s/1vjfP730_9xCaXUYJsgG4SA" target="_blank" rel="noopener">https://pan.baidu.com/s/1vjfP730_9xCaXUYJsgG4SA</a> 提取码：gbi4</p>
+<p>–项目</p>
+<p>【录制视频】Springboot框架项目实战-电商平台《伴我汽车》【Java】<a href="https://pan.baidu.com/s/1cE-9MDkl0btz08icf7-nUw" target="_blank" rel="noopener">https://pan.baidu.com/s/1cE-9MDkl0btz08icf7-nUw</a> 提取码：0pyr</p>
+<p>【录制视频】2019Java微服务架构2.0项目实战，全网最新<a href="https://pan.baidu.com/s/1dRxaqztDoXb2wtrVjZD1DQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1dRxaqztDoXb2wtrVjZD1DQ</a> 提取码：llwm</p>
+<p>【录制视频】Java微服务架构Alibaba篇_Spring Cloud Alibaba<a href="https://pan.baidu.com/s/19sxQmA6pMOdLZ9S0BYLD5g" target="_blank" rel="noopener">https://pan.baidu.com/s/19sxQmA6pMOdLZ9S0BYLD5g</a> 提取码：z7j6</p>
+<p>【录制视频】2019Java微服务实战Spring Cloud Alibaba For MyShop<a href="https://pan.baidu.com/s/1i5Q-yPfbONGTiMPDGa9IZg" target="_blank" rel="noopener">https://pan.baidu.com/s/1i5Q-yPfbONGTiMPDGa9IZg</a> 提取码：kbny</p>
+<p>–java达摩院</p>
+<p>【录制视频】2019从零开始系列-从零开始学编程【Java达摩院】<a href="https://pan.baidu.com/s/1S-4AdItl19gK2oG1eUi0Ag" target="_blank" rel="noopener">https://pan.baidu.com/s/1S-4AdItl19gK2oG1eUi0Ag</a> 提取码：o420</p>
+<p>【录制视频】2019从零开始系列-从零开始学网络【Java达摩院】<a href="https://pan.baidu.com/s/1PdOQIlIHWTxX0eA_9WPQPw" target="_blank" rel="noopener">https://pan.baidu.com/s/1PdOQIlIHWTxX0eA_9WPQPw</a> 提取码：p6ul</p>
+<p>【录制视频】2019从零开始系列-从零开始学电脑【Java达摩院】<a href="https://pan.baidu.com/s/1l4yjavGRi11nd_MfYrC_uw" target="_blank" rel="noopener">https://pan.baidu.com/s/1l4yjavGRi11nd_MfYrC_uw</a> 提取码：1ck0</p>
+<p>【录制视频】2019Java主流框架-Mybatis全集【Java达摩院】<a href="https://pan.baidu.com/s/1k3-QQj-86Hdr4DtVmpD3mA" target="_blank" rel="noopener">https://pan.baidu.com/s/1k3-QQj-86Hdr4DtVmpD3mA</a> 提取码：k9gc</p>
+<p>【录制视频】2019Java服务网格化系列-Kubernetes【Java达摩院】<a href="https://pan.baidu.com/s/1WO86pkI1pMBWesaCGNff3A" target="_blank" rel="noopener">https://pan.baidu.com/s/1WO86pkI1pMBWesaCGNff3A</a> 提取码：9c9u</p>
+<p>【录制视频】2019Redis从入门到大师【Java达摩院】<a href="https://pan.baidu.com/s/1Kcy5PhdU5t3dRaZNw2dpNQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1Kcy5PhdU5t3dRaZNw2dpNQ</a> 提取码：af72</p>
+<p>【录制视频】2019主流框架系列-SpringMVC【Java达摩院】<a href="https://pan.baidu.com/s/13kZzG0-NyXgKJDWEmiDEXQ" target="_blank" rel="noopener">https://pan.baidu.com/s/13kZzG0-NyXgKJDWEmiDEXQ</a> 提取码：oe2s</p>
+<p>【录制视频】2019主流框架系列-Struts2【Java达摩院】<a href="https://pan.baidu.com/s/1X1Ezo_o0-QKHnPXSLV1ZqA" target="_blank" rel="noopener">https://pan.baidu.com/s/1X1Ezo_o0-QKHnPXSLV1ZqA</a> 提取码：a5a4</p>
+<p>【录制视频】2019从零开始系列-从零开始学数据库-Oracle【Java达摩院】<a href="https://pan.baidu.com/s/1Z5Hlk-aFbYehMlIoc3AjhA" target="_blank" rel="noopener">https://pan.baidu.com/s/1Z5Hlk-aFbYehMlIoc3AjhA</a> 提取码：wa4w</p>
+<p>–工具</p>
+<p>Java相关软件 <a href="https://pan.baidu.com/s/1Hf4LGSVK-8Yn21BIF9fuzw" target="_blank" rel="noopener">https://pan.baidu.com/s/1Hf4LGSVK-8Yn21BIF9fuzw</a> 提取码：hwfg</p>
+<p>–项目</p>
+<p>【录制视频】2019JAVA面试题全集，看完就会<a href="https://pan.baidu.com/s/1xSfrgUeKA_pPZaLoOWDR-Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1xSfrgUeKA_pPZaLoOWDR-Q</a> 提取码：h6kj</p>
+<h1 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h1><p>–职业发展</p>
+<p>2019Web前端初识与职业发展<a href="https://pan.baidu.com/s/18iC3TEGV50WDdoyZm7h9-Q" target="_blank" rel="noopener">https://pan.baidu.com/s/18iC3TEGV50WDdoyZm7h9-Q</a> 提取码：zhs5</p>
+<p>–基础</p>
+<p>【录制视频】【】Web前端小白入门必看预习视频<a href="https://pan.baidu.com/s/1p_nQb8GBwQ_N_6CqoocEWQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1p_nQb8GBwQ_N_6CqoocEWQ</a> 提取码：fv71</p>
+<p>【录制视频】【】2019Web前端从入门到精通（HTML+CSS全套）<a href="https://pan.baidu.com/s/1b6aF0I1tsDiRRcG-drjcAg" target="_blank" rel="noopener">https://pan.baidu.com/s/1b6aF0I1tsDiRRcG-drjcAg</a> 提取码：yywh</p>
+<p>【录制视频】2019Web前端：一阶段专题视频合集<a href="https://pan.baidu.com/s/1W_xDdzGCggfwKv2qSk3QBA" target="_blank" rel="noopener">https://pan.baidu.com/s/1W_xDdzGCggfwKv2qSk3QBA</a> 提取码：ypxw</p>
+<p>–进阶</p>
+<p>【随堂视频】2019JavaScript全套视频~全套资料<a href="https://pan.baidu.com/s/1vNZDK2z8R5EnT74fztG3SA" target="_blank" rel="noopener">https://pan.baidu.com/s/1vNZDK2z8R5EnT74fztG3SA</a> 提取码：u1uf</p>
+<p>【录制视频】Electron-HTML+CSS+JS构建跨平台桌面应用程序【Web前端】 <a href="https://pan.baidu.com/s/1zS8Gr_lnKn8DNlQVB1JcHA" target="_blank" rel="noopener">https://pan.baidu.com/s/1zS8Gr_lnKn8DNlQVB1JcHA</a> 提取码：5wt8</p>
+<p>–高级</p>
+<p>【录制视频】uniApp视频全套资料配源码【Web前端】<a href="https://pan.baidu.com/s/1Ewu2LsoPUtScUKmLivjBWw" target="_blank" rel="noopener">https://pan.baidu.com/s/1Ewu2LsoPUtScUKmLivjBWw</a> 提取码：ni2s</p>
+<p>【录制视频】2019轻松玩转微信小程序开发【Web前端】<a href="https://pan.baidu.com/s/1h7Cpq4GkWyTxvalmjb05WQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1h7Cpq4GkWyTxvalmjb05WQ</a> 提取码：8bgr</p>
+<p>【录制视频】2019轻松玩转微信小程序开发【Web前端】<a href="https://pan.baidu.com/s/1h7Cpq4GkWyTxvalmjb05WQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1h7Cpq4GkWyTxvalmjb05WQ</a> 提取码：8bgr</p>
+<p>【随堂视频】2019React教程+实战全集【Web前端】<a href="https://pan.baidu.com/s/1m-89Yz2q57IZK_NhKtf9kg" target="_blank" rel="noopener">https://pan.baidu.com/s/1m-89Yz2q57IZK_NhKtf9kg</a> 提取码：pelh</p>
+<p>【录制视频】2019最新Flutter全套视频~全套资料【Web前端】<a href="https://pan.baidu.com/s/1X-9vUxJBQS43UsmZ8Ab-Xw" target="_blank" rel="noopener">https://pan.baidu.com/s/1X-9vUxJBQS43UsmZ8Ab-Xw</a> 提取码：xk3i</p>
+<p>【随堂视频】2019最新Vue从入门到大神【Web前端】<a href="https://pan.baidu.com/s/1DAAtSOy9oqbxdOxJ7vZz7g" target="_blank" rel="noopener">https://pan.baidu.com/s/1DAAtSOy9oqbxdOxJ7vZz7g</a> 提取码：jlnm</p>
+<p>【随堂视频】2019最新nodeJS从入门到大神【Web前端】<a href="https://pan.baidu.com/s/1n15UoyIh8LRVRdkjg4pgAA" target="_blank" rel="noopener">https://pan.baidu.com/s/1n15UoyIh8LRVRdkjg4pgAA</a> 提取码：c78b</p>
+<p>【录制视频】2019安卓混合开发视频精讲【Web前端】<a href="https://pan.baidu.com/s/132Cb0p_mMBalrc7Njdj1lw" target="_blank" rel="noopener">https://pan.baidu.com/s/132Cb0p_mMBalrc7Njdj1lw</a> 提取码：i0r6</p>
+<p>【录制视频】2019ios混合开发视频精讲【Web前端】<a href="https://pan.baidu.com/s/1OSyW32F7VosuW25CGlkuHA" target="_blank" rel="noopener">https://pan.baidu.com/s/1OSyW32F7VosuW25CGlkuHA</a> 提取码：drx3</p>
+<p>【录制视频】2019最新immutable.js持久化数据结构<a href="https://pan.baidu.com/s/18c_tysaaXcshEN2ELYJPjA" target="_blank" rel="noopener">https://pan.baidu.com/s/18c_tysaaXcshEN2ELYJPjA</a> 提取码：v4qq</p>
+<p>【录制视频】2019最新Webpack4.0教程<a href="https://pan.baidu.com/s/1V9kX7e8-FCjVrmUDzL9A-Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1V9kX7e8-FCjVrmUDzL9A-Q</a> 提取码：etxn</p>
+<p>【录制视频】2019Web前端教程-VUE服务器端渲染之NUXT实战<a href="https://pan.baidu.com/s/10_q7P-6rjTAyXloLWzQmfg" target="_blank" rel="noopener">https://pan.baidu.com/s/10_q7P-6rjTAyXloLWzQmfg</a> 提取码：hhhh</p>
+<p>【录制视频】2019Web前端教程-React服务器端渲染之NextJS实战<a href="https://pan.baidu.com/s/1AdANnTYIIrSngAWVgEq7pQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1AdANnTYIIrSngAWVgEq7pQ</a> 提取码：x0hs</p>
+<p>【录制视频】2019Web前端教程-GraphQL入门到精通<a href="https://pan.baidu.com/s/140yFksbRYpFhcjRpvWuK_Q" target="_blank" rel="noopener">https://pan.baidu.com/s/140yFksbRYpFhcjRpvWuK_Q</a></p>
+<p>【录制视频】Web前端教程-Web前端框架课程 <a href="https://pan.baidu.com/s/10dy5VrG_nz7t4qeSFReQAg" target="_blank" rel="noopener">https://pan.baidu.com/s/10dy5VrG_nz7t4qeSFReQAg</a> 提取码：1k2k</p>
+<p>【录制视频】Web前端教程-Angular4从入门到实战 <a href="https://pan.baidu.com/s/1gVwNyufWHewe3XHHpBzkRA" target="_blank" rel="noopener">https://pan.baidu.com/s/1gVwNyufWHewe3XHHpBzkRA</a> 提取码：03ia</p>
+<p>【录制视频】Web前端教程-Touch从基础应用到实战 <a href="https://pan.baidu.com/s/1vDYDRbQe4IRW5joMZVMneg" target="_blank" rel="noopener">https://pan.baidu.com/s/1vDYDRbQe4IRW5joMZVMneg</a> 提取码：m9fw</p>
+<p>【录制视频】Web前端教程-Vue组件之手机通讯录实战 <a href="https://pan.baidu.com/s/1MVAaglD-0HEH487VjN6lJQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1MVAaglD-0HEH487VjN6lJQ</a> 提取码：tckn</p>
+<p>【录制视频】Web前端教程-用面向对象打造迷你Vue框架 <a href="https://pan.baidu.com/s/1tOTYYZU7dz6m2-8s0GbGaQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1tOTYYZU7dz6m2-8s0GbGaQ</a> 提取码：4nc3</p>
+<p>【录制视频】Web前端教程-Web前端项目精讲 <a href="https://pan.baidu.com/s/1l9TKpvGsOgrS2biSKtR0Ww" target="_blank" rel="noopener">https://pan.baidu.com/s/1l9TKpvGsOgrS2biSKtR0Ww</a> 提取码：bnfz</p>
+<p>–项目</p>
+<p>【录制视频】小程序全栈开发之喵喵交友，视频免费全开源【Web前端】<a href="https://pan.baidu.com/s/1ggShoLPpbryYc8oKbL1rCQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1ggShoLPpbryYc8oKbL1rCQ</a> 提取码：dlib</p>
+<p>【录制视频】2019Web前端：实战项目之拉勾网<a href="https://pan.baidu.com/s/14euiJhiUoBaUPExl5yqDOA" target="_blank" rel="noopener">https://pan.baidu.com/s/14euiJhiUoBaUPExl5yqDOA</a> 提取码：eh97</p>
+<p>【录制视频】2019逻辑思维训练【Web前端】<a href="https://pan.baidu.com/s/1idFhXvfWPGjclexuIhZuCw" target="_blank" rel="noopener">https://pan.baidu.com/s/1idFhXvfWPGjclexuIhZuCw</a> 提取码：3o0t</p>
+<p>【录制视频】2019Web前端：教你如何写好毕业论文 <a href="https://pan.baidu.com/s/152BjkOQc81Iofl7ZN_6LNw" target="_blank" rel="noopener">https://pan.baidu.com/s/152BjkOQc81Iofl7ZN_6LNw</a> 提取码：wduj</p>
+<p>【录制视频】2019Web前端：实战项目之网易云 <a href="https://pan.baidu.com/s/1z2z-3YGpMjJcs6QPm32UMA" target="_blank" rel="noopener">https://pan.baidu.com/s/1z2z-3YGpMjJcs6QPm32UMA</a> 提取码：vayf</p>
+<p>【录制视频】2019Web前端：实战项目之头条 <a href="https://pan.baidu.com/s/17-XBzPvBuT5P8fuAbJnFJQ" target="_blank" rel="noopener">https://pan.baidu.com/s/17-XBzPvBuT5P8fuAbJnFJQ</a> 提取码：tjia</p>
+<p>【录制视频】2019Web前端：实战项目之幸福西饼 <a href="https://pan.baidu.com/s/1ri5LJYt5skJeymcefD7RsA" target="_blank" rel="noopener">https://pan.baidu.com/s/1ri5LJYt5skJeymcefD7RsA</a> 提取码：mk5v</p>
+<p>【录制视频】2019Web前端：一小时开发996.ICU<a href="https://pan.baidu.com/s/1gvvHaLfeflZ-9n-ioc8nMw" target="_blank" rel="noopener">https://pan.baidu.com/s/1gvvHaLfeflZ-9n-ioc8nMw</a> 提取码：qako</p>
+<p>【录制视频】2019Web前端：Vue实战项目之喵喵电影<a href="https://pan.baidu.com/s/1Zz4FwKfq-7gSe5WbYQuTNw" target="_blank" rel="noopener">https://pan.baidu.com/s/1Zz4FwKfq-7gSe5WbYQuTNw</a> 提取码：5wu1</p>
+<p>–面试题</p>
+<p>【录制视频】1+X技能认证培训（出品）<a href="https://pan.baidu.com/s/1Wa8-YvLM4r0tVVKtqRnmzg" target="_blank" rel="noopener">https://pan.baidu.com/s/1Wa8-YvLM4r0tVVKtqRnmzg</a> 提取码：zi0g</p>
+<p>【录制视频】2019前端新人入行常见问题大合集【Web前端】<a href="https://pan.baidu.com/s/1Lx5-JMj6U_IqvCkWT9bRLw" target="_blank" rel="noopener">https://pan.baidu.com/s/1Lx5-JMj6U_IqvCkWT9bRLw</a> 提取码：699k</p>
+<p>【录制视频】企业面试题精讲①-node.js及项目工程化<a href="https://pan.baidu.com/s/10XI6tutQhhWtp5nMjzXb3Q" target="_blank" rel="noopener">https://pan.baidu.com/s/10XI6tutQhhWtp5nMjzXb3Q</a> 提取码：gupu</p>
+<p>【录制视频】企业面试题精讲②-reactJS常见问题讲解<a href="https://pan.baidu.com/s/1iRPubj_Ck21Zp8LA7hYDOA" target="_blank" rel="noopener">https://pan.baidu.com/s/1iRPubj_Ck21Zp8LA7hYDOA</a> 提取码：c828</p>
+<p>【录制视频】企业面试题精讲③-Vue.js常见问题讲解<a href="https://pan.baidu.com/s/1kBLiKL2lwS9d08TCc0WIkw" target="_blank" rel="noopener">https://pan.baidu.com/s/1kBLiKL2lwS9d08TCc0WIkw</a> 提取码：3la7</p>
+<p>【录制视频】企业面试题精讲④-页面布局及设备适配<a href="https://pan.baidu.com/s/1BXcAVgki-MdhM-DM2laeSw" target="_blank" rel="noopener">https://pan.baidu.com/s/1BXcAVgki-MdhM-DM2laeSw</a> 提取码：ca77</p>
+<p>【录制视频】企业面试题精讲⑤-前后端协作及综合问题讲解<a href="https://pan.baidu.com/s/1nhOBGOpU4iGUOn7AJqXpaQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1nhOBGOpU4iGUOn7AJqXpaQ</a> 提取码：361z</p>
+<p>【录制视频】企业面试题精讲⑥-原生JS、jQuery常见问题讲解<a href="https://pan.baidu.com/s/1Aep6NVSrQninUbl38n3BJA" target="_blank" rel="noopener">https://pan.baidu.com/s/1Aep6NVSrQninUbl38n3BJA</a> 提取码：eccm</p>
+<p>–工具</p>
+<p>HTML5相关软件 <a href="https://pan.baidu.com/s/1KJRriI19YNmonKsMdEhjKg" target="_blank" rel="noopener">https://pan.baidu.com/s/1KJRriI19YNmonKsMdEhjKg</a></p>
+<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p>–职业发展</p>
+<p>2019Python初识与职业发展<a href="https://pan.baidu.com/s/1KleRjiryk-wLpZOk5IzU7w" target="_blank" rel="noopener">https://pan.baidu.com/s/1KleRjiryk-wLpZOk5IzU7w</a> 提取码：dwlf</p>
+<p>–基础</p>
+<p>【录制视频】10天自学Python，轻松掌握Python基础<a href="https://pan.baidu.com/s/1w2WZ29Y09V-tGcp5zqVfMw" target="_blank" rel="noopener">https://pan.baidu.com/s/1w2WZ29Y09V-tGcp5zqVfMw</a> 提取码：pija</p>
+<p>【随堂视频】2019Python全套视频教程，史上最经典 <a href="https://pan.baidu.com/s/1WBmwVI32SEi6rX2Gqzdb8w" target="_blank" rel="noopener">https://pan.baidu.com/s/1WBmwVI32SEi6rX2Gqzdb8w</a> 提取码：y5a1</p>
+<p>【随堂视频】最新Python知识体系梳理<a href="https://pan.baidu.com/s/11l-7yVrBD004A_JojwpWfA" target="_blank" rel="noopener">https://pan.baidu.com/s/11l-7yVrBD004A_JojwpWfA</a> 提取码：52rs</p>
+<p>【录制视频】2019Python工具安装教程 <a href="https://pan.baidu.com/s/1IOTfDdOr-jlpOks4yO9oEA" target="_blank" rel="noopener">https://pan.baidu.com/s/1IOTfDdOr-jlpOks4yO9oEA</a> 提取码：d9yw</p>
+<p>【随堂视频】Python教程-Web前端入门 <a href="https://pan.baidu.com/s/1tdauUbLWoxLbl63iMJj32w" target="_blank" rel="noopener">https://pan.baidu.com/s/1tdauUbLWoxLbl63iMJj32w</a> 提取码：ijpj</p>
+<p>–进阶</p>
+<p>【随堂视频】2019最新Django全套教程【Python】<a href="https://pan.baidu.com/s/1yfWuClO00FpU3uCQtRiwbg" target="_blank" rel="noopener">https://pan.baidu.com/s/1yfWuClO00FpU3uCQtRiwbg</a> 提取码：8wql</p>
+<p>【随堂视频】Django轻松实现博客网站<a href="https://pan.baidu.com/s/1cIGJnEY8fxum_Ez8gjFWqQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1cIGJnEY8fxum_Ez8gjFWqQ</a> 提取码：d15p</p>
+<p>【随堂视频】最新Tornado框架实战教程<a href="https://pan.baidu.com/s/19_mS_liDeop1Qz_az_G6hw" target="_blank" rel="noopener">https://pan.baidu.com/s/19_mS_liDeop1Qz_az_G6hw</a> 提取码：bw41</p>
+<p>【随堂视频】2019最新Flask框架入门教程 <a href="https://pan.baidu.com/s/1xOPdwl62IUJKFmwMQglB6Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1xOPdwl62IUJKFmwMQglB6Q</a> 提取码：ii4d</p>
+<p>–高级</p>
+<p>【随堂视频】2019Python最新Swiper项目从入门到实战<a href="https://pan.baidu.com/s/1DrNbijHYj5K8bzaj-lVn6g" target="_blank" rel="noopener">https://pan.baidu.com/s/1DrNbijHYj5K8bzaj-lVn6g</a> 提取码：yzkt</p>
+<p>【录制视频】2019Python爬虫超详细教程（精华版）<a href="https://pan.baidu.com/s/1ZU282ajzQ4uMFwbFk-XUwQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1ZU282ajzQ4uMFwbFk-XUwQ</a> 提取码：e3lu</p>
+<p>【随堂视频】2019Python爬虫全套视频（最经典）<a href="https://pan.baidu.com/s/1uJjvFlk2JsuLhVnkwtEkvQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1uJjvFlk2JsuLhVnkwtEkvQ</a> 提取码：pi5s</p>
+<p>【录制视频】2019Python数据分析+人工智能从入门到精通<a href="https://pan.baidu.com/s/1iy_6k1TQKhKODC2QO-BABw" target="_blank" rel="noopener">https://pan.baidu.com/s/1iy_6k1TQKhKODC2QO-BABw</a> 提取码：lboy</p>
+<p>【随堂视频】数据分析和人工智能教程全套<a href="https://pan.baidu.com/s/1wXsqNYwgDrbDWJX8HVTRWw" target="_blank" rel="noopener">https://pan.baidu.com/s/1wXsqNYwgDrbDWJX8HVTRWw</a> 提取码：l2ta</p>
+<p>【录制视频】2019KNN算法从入门到大师<a href="https://pan.baidu.com/s/1VKjWhSldA40fB2qeUkmvwA" target="_blank" rel="noopener">https://pan.baidu.com/s/1VKjWhSldA40fB2qeUkmvwA</a> 提取码：b2pq</p>
+<p>–项目</p>
+<p>【录制视频】Python爬虫—国庆档电影爬取与分析【】<a href="https://pan.baidu.com/s/18U_bkEXBQDH8n6vhTnyy2A" target="_blank" rel="noopener">https://pan.baidu.com/s/18U_bkEXBQDH8n6vhTnyy2A</a> 提取码：d3kg</p>
+<p>【随堂视频】2019央企Python人工智能内训【】<a href="https://pan.baidu.com/s/1iOWV6hfXUYS2RXci9sZb3Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1iOWV6hfXUYS2RXci9sZb3Q</a> 提取码：c1bd</p>
+<p>【录制视频】Python项目精讲①-好莱坞百万级评分数据分析<a href="https://pan.baidu.com/s/14cCvIxwTF_AcpPfjJwRKdQ" target="_blank" rel="noopener">https://pan.baidu.com/s/14cCvIxwTF_AcpPfjJwRKdQ</a> 提取码：8gtn</p>
+<p>【录制视频】Python项目精讲②-美国总统竞选赞助数据分析<a href="https://pan.baidu.com/s/11D5L0TRS7ZYNmdEky1vGfQ" target="_blank" rel="noopener">https://pan.baidu.com/s/11D5L0TRS7ZYNmdEky1vGfQ</a> 提取码：hhw7</p>
+<p>–工具</p>
+<p>Python相关软件 <a href="https://pan.baidu.com/s/1EdjDxEHPnDAx2p-On5r4sg" target="_blank" rel="noopener">https://pan.baidu.com/s/1EdjDxEHPnDAx2p-On5r4sg</a> 提取码：9ajq</p>
+<h1 id="大数据"><a href="#大数据" class="headerlink" title="大数据"></a>大数据</h1><p>–职业发展</p>
+<p>【录制视频】2019好程序员大数据初识与职业发展<a href="https://pan.baidu.com/s/1tmxhVSU_EEUVbFZYcGV5Zg" target="_blank" rel="noopener">https://pan.baidu.com/s/1tmxhVSU_EEUVbFZYcGV5Zg</a> 提取码：p8r2</p>
+<p>–基础</p>
+<p>2019好程序员大数据必学Java基础全套教程（一）<a href="https://pan.baidu.com/s/1GU4KfkSoeaMwotGyGP2BFQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1GU4KfkSoeaMwotGyGP2BFQ</a> 提取码：l43h</p>
+<p>【随堂视频】2019好程序员Java入门教程+学习资料【完结】<a href="https://pan.baidu.com/s/1htoLNJUmYQ4RRrA23NJbEg" target="_blank" rel="noopener">https://pan.baidu.com/s/1htoLNJUmYQ4RRrA23NJbEg</a> 提取码：496w</p>
+<p>–进阶</p>
+<p>【录制视频】2019好程序员Hadoop入门教程【大数据】-连载中<a href="https://pan.baidu.com/s/1UbG6L4RkTd8hNeDuN-00aA" target="_blank" rel="noopener">https://pan.baidu.com/s/1UbG6L4RkTd8hNeDuN-00aA</a> 提取码：qgis</p>
+<p>【录制视频】2019最新Hadoop入门教程<a href="https://pan.baidu.com/s/1NfMUR4zTap8IRrNNfsCE4A" target="_blank" rel="noopener">https://pan.baidu.com/s/1NfMUR4zTap8IRrNNfsCE4A</a> 提取码：phzx</p>
+<p>【录制视频】2019最新Hive入门教程<a href="https://pan.baidu.com/s/1iVFTXVm0-hkAja7slZEVjg" target="_blank" rel="noopener">https://pan.baidu.com/s/1iVFTXVm0-hkAja7slZEVjg</a> 提取码：mefj</p>
+<p>【录制视频】好程序员大数据教程-Hive入门必学教程 <a href="https://pan.baidu.com/s/11QVj2UldTRzsUEVk2rSLNw" target="_blank" rel="noopener">https://pan.baidu.com/s/11QVj2UldTRzsUEVk2rSLNw</a> 提取码：sg3x</p>
+<p>【随堂视频】2019好程序员MySQL基础全套教程【大数据】（二） <a href="https://pan.baidu.com/s/1wolS8sEEvkF-gdB1ki-w-w" target="_blank" rel="noopener">https://pan.baidu.com/s/1wolS8sEEvkF-gdB1ki-w-w</a> 提取码：amtu</p>
+<p>【随堂视频】2019好程序员Hadoop全套教程【大数据】（三） <a href="https://pan.baidu.com/s/1uEn55ZXvNmFKrT2KpBiGeA" target="_blank" rel="noopener">https://pan.baidu.com/s/1uEn55ZXvNmFKrT2KpBiGeA</a> 提取码：0x1c</p>
+<p>–高级</p>
+<p>【随堂视频】2019好程序员Spark全套教程【大数据】（四）<a href="https://pan.baidu.com/s/12RmuHQUS7gxvhFQOClCvhQ" target="_blank" rel="noopener">https://pan.baidu.com/s/12RmuHQUS7gxvhFQOClCvhQ</a> 提取码：adkj</p>
+<p>【录制视频】2019JAVA设计模式精讲【好程序员大数据】<a href="https://pan.baidu.com/s/1FqdYFOOAy-mVfc8Zqbq87A" target="_blank" rel="noopener">https://pan.baidu.com/s/1FqdYFOOAy-mVfc8Zqbq87A</a> 提取码：zs29</p>
+<p>【录制视频】2019Java多线程精讲【好程序员大数据】<a href="https://pan.baidu.com/s/1kHUkh7ZqJReiamt-0BOXAA" target="_blank" rel="noopener">https://pan.baidu.com/s/1kHUkh7ZqJReiamt-0BOXAA</a> 提取码：johs</p>
+<p>【录制视频】2019最新小白速成调度框架azkaban【好程序员大数据】<a href="https://pan.baidu.com/s/1RVLh8UVL7SBwK77j4SbEXw" target="_blank" rel="noopener">https://pan.baidu.com/s/1RVLh8UVL7SBwK77j4SbEXw</a> 提取码：nvql</p>
+<p>【录制视频】2019最新快速玩转HBase~连载<a href="https://pan.baidu.com/s/1RbjmaBDCR4jJmy6D1JDRRQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1RbjmaBDCR4jJmy6D1JDRRQ</a> 提取码：jsye</p>
+<p>【录制视频】2019JAVA8新特性之集合的流式操作~连载<a href="https://pan.baidu.com/s/1ttcPxagRXo1_ivrEiHVVNA" target="_blank" rel="noopener">https://pan.baidu.com/s/1ttcPxagRXo1_ivrEiHVVNA</a> 提取码：eipt</p>
+<p>【录制视频】2019好程序员大数据之快速入门Flink~连载<a href="https://pan.baidu.com/s/1g3ubsn8Rgna6BfwZGtAfVg" target="_blank" rel="noopener">https://pan.baidu.com/s/1g3ubsn8Rgna6BfwZGtAfVg</a> 提取码：k5ew</p>
+<p>【录制视频】2019好程序员大数据之快速入门Scala~连载 链接<a href="https://pan.baidu.com/s/1_V0E5DZYD8zBRY5qTA97uQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1_V0E5DZYD8zBRY5qTA97uQ</a> 提取码：0jac</p>
+<p>【录制视频】2019好程序员大数据之快速入门Spark~连载<a href="https://pan.baidu.com/s/1z_et0uq8w9gpt8WWvGHIIw" target="_blank" rel="noopener">https://pan.baidu.com/s/1z_et0uq8w9gpt8WWvGHIIw</a> 提取码：ilyu</p>
+<p>【录制视频】2019好程序员大数据之人工智能必学用数学看待机器学习<a href="https://pan.baidu.com/s/1Q_fqIE5RBsMl6ccsN-QbTg" target="_blank" rel="noopener">https://pan.baidu.com/s/1Q_fqIE5RBsMl6ccsN-QbTg</a> 提取码：1h0y</p>
+<p>【录制视频】2019大数据：2天学会Lambda表达式<a href="https://pan.baidu.com/s/180n1SMnp_lwtrEoMFsdrIA" target="_blank" rel="noopener">https://pan.baidu.com/s/180n1SMnp_lwtrEoMFsdrIA</a> 提取码：0bwj</p>
+<p>【录制视频】2019大数据统计机器学习算法精讲<a href="https://pan.baidu.com/s/1Jj-3-uVvEdEjXYepKSbdvg" target="_blank" rel="noopener">https://pan.baidu.com/s/1Jj-3-uVvEdEjXYepKSbdvg</a></p>
+<p>【录制视频】2019好程序员大数据教程-Spark Livy入门到精通 <a href="https://pan.baidu.com/s/1MQL3dbf4GrdydIYjc84INw" target="_blank" rel="noopener">https://pan.baidu.com/s/1MQL3dbf4GrdydIYjc84INw</a> 提取码：zvh2</p>
+<p>【录制视频】2019好程序员大数据教程-机器学习之线性回归 <a href="https://pan.baidu.com/s/1ErvcRyjJJ_Sgrk0hOSvWyQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1ErvcRyjJJ_Sgrk0hOSvWyQ</a> 提取码：mogk</p>
+<p>【录制视频】2019好程序员大数据教程-机器学习之SVM模型 <a href="https://pan.baidu.com/s/1mx48l4lrNfYwplFu_tNUKA" target="_blank" rel="noopener">https://pan.baidu.com/s/1mx48l4lrNfYwplFu_tNUKA</a> 提取码：0hiw</p>
+<p>【录制视频】2019好程序员大数据教程-机器学习之逻辑回归 <a href="https://pan.baidu.com/s/1Ai-5sAs0BwXwFwkKzhWW-Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1Ai-5sAs0BwXwFwkKzhWW-Q</a> 提取码：shym</p>
+<p>【录制视频】2019好程序员大数据教程-3天快速入门机器学习 <a href="https://pan.baidu.com/s/1P9rIYP1SJallqoyvVVjjNQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1P9rIYP1SJallqoyvVVjjNQ</a> 提取码：y8ef</p>
+<p>【录制视频】2019最新ElasticSearch快速入门教程<a href="https://pan.baidu.com/s/182RTgdJNpnajqygFgS9XbQ" target="_blank" rel="noopener">https://pan.baidu.com/s/182RTgdJNpnajqygFgS9XbQ</a> 提取码：offj</p>
+<p>【录制视频】2019最新快速玩转SparkGraphx系列<a href="https://pan.baidu.com/s/1_9PDPimgeuOL6pzND0QNLQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1_9PDPimgeuOL6pzND0QNLQ</a> 提取码：s5za</p>
+<p>【录制视频】2019最新小白速成调度框架oozie<a href="https://pan.baidu.com/s/1Wmh41Q4mWop7obnXvVNUJA" target="_blank" rel="noopener">https://pan.baidu.com/s/1Wmh41Q4mWop7obnXvVNUJA</a> 提取码：trpv</p>
+<p>【录制视频】2019最新快速玩转Flume教程<a href="https://pan.baidu.com/s/1gLowi7EZ_sNAKeLV-jmJBg" target="_blank" rel="noopener">https://pan.baidu.com/s/1gLowi7EZ_sNAKeLV-jmJBg</a> 提取码：8xt2</p>
+<p>【录制视频】好程序员大数据教程-3天快速入门数据可视化 <a href="https://pan.baidu.com/s/1PJ4GKZRlWwOGeesucjhlsQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1PJ4GKZRlWwOGeesucjhlsQ</a> 提取码：stjs</p>
+<p>–工具</p>
+<p>大数据相关软件 <a href="https://pan.baidu.com/s/1nRyWU1WLvMyrfeJqKr-wGg" target="_blank" rel="noopener">https://pan.baidu.com/s/1nRyWU1WLvMyrfeJqKr-wGg</a> 提取码：l83n</p>
+<h1 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h1><p>–职业发展</p>
+<p>2019UI初识与职业发展<a href="https://pan.baidu.com/s/1xMGpa_oWUsovdfzTfuM2ng" target="_blank" rel="noopener">https://pan.baidu.com/s/1xMGpa_oWUsovdfzTfuM2ng</a> 提取码：p1fy</p>
+<p>–基础</p>
+<p>【录制视频】2019最新UI手绘教学视频（完结）<a href="https://pan.baidu.com/s/1rHV2dXA-k1M_5qHcJD3DMg" target="_blank" rel="noopener">https://pan.baidu.com/s/1rHV2dXA-k1M_5qHcJD3DMg</a> 提取码：u7mu</p>
+<p>【录制视频】20天学会UI设计(PS+AI)入门教程<a href="https://pan.baidu.com/s/1dCzXyVWFFQFhEO2Nq14ivg" target="_blank" rel="noopener">https://pan.baidu.com/s/1dCzXyVWFFQFhEO2Nq14ivg</a> 提取码：hf48</p>
+<p>–进阶</p>
+<p>【录制视频】2019UI网页设计全套视频（精品版）<a href="https://pan.baidu.com/s/1dMP0XWIzEhPIACEda7nCkg" target="_blank" rel="noopener">https://pan.baidu.com/s/1dMP0XWIzEhPIACEda7nCkg</a> 提取码：fylf</p>
+<p>【随堂视频】2019UI教程-Banner设计从入门到精通 <a href="https://pan.baidu.com/s/1Dvz7JqqAtCHWYCxeTG8Nxg" target="_blank" rel="noopener">https://pan.baidu.com/s/1Dvz7JqqAtCHWYCxeTG8Nxg</a> 提取码：7uyh</p>
+<p>电商设计全套教程精讲【UI设计】<a href="https://pan.baidu.com/s/13linISghe5XbXM1FGmphTA&amp;shfl=sharepset" target="_blank" rel="noopener">https://pan.baidu.com/s/13linISghe5XbXM1FGmphTA&amp;shfl=sharepset</a> 提取码：g0vx</p>
+<p>–高级</p>
+<p>【随堂视频】UI教程-教你玩转图标icon <a href="https://pan.baidu.com/s/1ub-8p0UfqcYdswjM64gbJg" target="_blank" rel="noopener">https://pan.baidu.com/s/1ub-8p0UfqcYdswjM64gbJg</a> 提取码：cinq</p>
+<p>【随堂视频】UI教程-移动端设计教程 <a href="https://pan.baidu.com/s/1suuaw7jsgwbMUVl6Ye5kjA" target="_blank" rel="noopener">https://pan.baidu.com/s/1suuaw7jsgwbMUVl6Ye5kjA</a> 提取码：gs1j</p>
+<p>【随堂视频】UI教程-UI知识点讲解视频 <a href="https://pan.baidu.com/s/10U3CFODv8_3dP24JLFlJVQ" target="_blank" rel="noopener">https://pan.baidu.com/s/10U3CFODv8_3dP24JLFlJVQ</a> 提取码：n9ep</p>
+<p>【随堂视频】UI教程-UI实战案例 <a href="https://pan.baidu.com/s/1YaeyiG-32c54o3KpESV-jA" target="_blank" rel="noopener">https://pan.baidu.com/s/1YaeyiG-32c54o3KpESV-jA</a> 提取码：26ug</p>
+<p>【随堂视频】5天学会AE动效实战<a href="https://pan.baidu.com/s/1ZY2kllcGXdMYr5yxfL-i-Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1ZY2kllcGXdMYr5yxfL-i-Q</a> 提取码：anr7</p>
+<p>【随堂视频】2019最新意派基础讲解教程<a href="https://pan.baidu.com/s/1df1uH-q1kLApMuv0K0eUXQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1df1uH-q1kLApMuv0K0eUXQ</a> 提取码：xkq0</p>
+<p>【随堂视频】2019最新C4D入门教程<a href="https://pan.baidu.com/s/1mJELR1WUQ3OT15KKGYvb2g" target="_blank" rel="noopener">https://pan.baidu.com/s/1mJELR1WUQ3OT15KKGYvb2g</a> 提取码：uiwd</p>
+<p>【随堂视频】2019Axure从入门到大师全集【UI】<a href="https://pan.baidu.com/s/14ZeAfQiE7AxKDfcD12vfSQ" target="_blank" rel="noopener">https://pan.baidu.com/s/14ZeAfQiE7AxKDfcD12vfSQ</a> 提取码：k0hy</p>
+<p>【随堂视频】2019UI教程-安卓手机主题入门基础 <a href="https://pan.baidu.com/s/138eLBeacKrKaZyUgJLRHVQ" target="_blank" rel="noopener">https://pan.baidu.com/s/138eLBeacKrKaZyUgJLRHVQ</a> 提取码：egx7</p>
+<p>【随堂视频】2019UI教程-智能可穿戴设备的设计规范 <a href="https://pan.baidu.com/s/1G0UI_bz5awRUOSw_Gz2CDw" target="_blank" rel="noopener">https://pan.baidu.com/s/1G0UI_bz5awRUOSw_Gz2CDw</a> 提取码：li0h</p>
+<p>【随堂视频】2019UI教程-零基础学习Sketch <a href="https://pan.baidu.com/s/1J15v6tnB0g-htkVssKupQQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1J15v6tnB0g-htkVssKupQQ</a> 提取码：mcgs</p>
+<p>–项目</p>
+<p>【录制视频】2019C4D项目实战-房子建模【UI设计】 <a href="https://pan.baidu.com/s/1Ny05wpYn6J6dP7neqY8XLg" target="_blank" rel="noopener">https://pan.baidu.com/s/1Ny05wpYn6J6dP7neqY8XLg</a> 提取码：olqc</p>
+<p>【录制视频】2019C4D项目实战-剪纸风格【UI设计】<a href="https://pan.baidu.com/s/1dsoVjBpHIGs9U4ky3yBC4A" target="_blank" rel="noopener">https://pan.baidu.com/s/1dsoVjBpHIGs9U4ky3yBC4A</a> 提取码：o3mz</p>
+<p>【录制视频】2019C4D项目实战-字体海报设计【UI设计】<a href="https://pan.baidu.com/s/1-9AELjePf_o73E3p2vjwlg" target="_blank" rel="noopener">https://pan.baidu.com/s/1-9AELjePf_o73E3p2vjwlg</a> 提取码：wl3z</p>
+<p>【录制视频】2019C4D项目实战-制作炫彩字体【UI设计】<a href="https://pan.baidu.com/s/1JDgse-p5G-n4_nai_FhBTA" target="_blank" rel="noopener">https://pan.baidu.com/s/1JDgse-p5G-n4_nai_FhBTA</a> 提取码：vdoy</p>
+<p>–工具</p>
+<p>UI相关软件 <a href="https://pan.baidu.com/s/1mnLUCwd2Vt4GHwOu6xuWJw" target="_blank" rel="noopener">https://pan.baidu.com/s/1mnLUCwd2Vt4GHwOu6xuWJw</a> 提取码：isey</p>
+<h1 id="Linux云计算"><a href="#Linux云计算" class="headerlink" title="Linux云计算"></a>Linux云计算</h1><p>–职业发展</p>
+<p>【录制视频】什么是云计算？ <a href="https://pan.baidu.com/s/1zuwsIwzFgEwfsHSubjAygA" target="_blank" rel="noopener">https://pan.baidu.com/s/1zuwsIwzFgEwfsHSubjAygA</a> 提取码：s06h</p>
+<p>–基础</p>
+<p>【录制视频】5天学会Linux云计算【】<a href="https://pan.baidu.com/s/1Q6-19fouSDVc0VDHG12KyQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1Q6-19fouSDVc0VDHG12KyQ</a> 提取码：m5cf</p>
+<p>【随堂视频】Linux新手入门教程（一）<a href="https://pan.baidu.com/s/1d7nlCNwZk-GqZbOh3zSORw" target="_blank" rel="noopener">https://pan.baidu.com/s/1d7nlCNwZk-GqZbOh3zSORw</a> 提取码：sjjf</p>
+<p>【随堂视频】2019Shell编程从入门到实战（二）<a href="https://pan.baidu.com/s/10tnR9TSSlIYMmomL3P6oxw" target="_blank" rel="noopener">https://pan.baidu.com/s/10tnR9TSSlIYMmomL3P6oxw</a> 提取码：3ead</p>
+<p>–进阶</p>
+<p>【录制视频】2019企业私有云容器化架构运维实战【Linux】<a href="https://pan.baidu.com/s/1tBmk2gr7jfBxUvz6LMrG2A" target="_blank" rel="noopener">https://pan.baidu.com/s/1tBmk2gr7jfBxUvz6LMrG2A</a> 提取码：irc6</p>
+<p>【随堂视频】Linux开源数据库MySQL运维实战（三）<a href="https://pan.baidu.com/s/1unOWh2YQtQsyepFq2tIlEQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1unOWh2YQtQsyepFq2tIlEQ</a> 提取码：yqyv</p>
+<p>【随堂视频】Python语法基础和常用模块使用（四）<a href="https://pan.baidu.com/s/1r2zLDQ_4_dgu3yOxiM147A" target="_blank" rel="noopener">https://pan.baidu.com/s/1r2zLDQ_4_dgu3yOxiM147A</a> 提取码：97rq</p>
+<p>【随堂视频】大型网站高并发之集群教程 <a href="https://pan.baidu.com/s/1QqQBls-D3S0cYsuUOy_qWA" target="_blank" rel="noopener">https://pan.baidu.com/s/1QqQBls-D3S0cYsuUOy_qWA</a> 提取码：kf3c</p>
+<p>【随堂视频】MySQL DBA从入门到精通 <a href="https://pan.baidu.com/s/10xLup3QAO0_mxCipu6SEgw" target="_blank" rel="noopener">https://pan.baidu.com/s/10xLup3QAO0_mxCipu6SEgw</a></p>
+<p>【随堂视频】Linux和数据库实战教程 <a href="https://pan.baidu.com/s/14ZuVCOQIkdmsAJIShmvmCQ" target="_blank" rel="noopener">https://pan.baidu.com/s/14ZuVCOQIkdmsAJIShmvmCQ</a> 提取码：cwpt</p>
+<p>–高级</p>
+<p>【录制视频】2019Python自动化运维开发【Linux】~连载<a href="https://pan.baidu.com/s/1fvMVQe0Gw89w5qE7ZQdQ3w" target="_blank" rel="noopener">https://pan.baidu.com/s/1fvMVQe0Gw89w5qE7ZQdQ3w</a> 提取码：8rut</p>
+<p>【录制视频】2019大型网站高并发架构及自动化运维项目精讲【Linux】<a href="https://pan.baidu.com/s/19S5eTd4gbsWBm-OoBpESBg" target="_blank" rel="noopener">https://pan.baidu.com/s/19S5eTd4gbsWBm-OoBpESBg</a> 提取码：s3n2</p>
+<p>【随堂视频】Linux大型网站高并发架构及自动化运维（五）<a href="https://pan.baidu.com/s/1Mdc8YVhFLBoGOGZEzvDzLA" target="_blank" rel="noopener">https://pan.baidu.com/s/1Mdc8YVhFLBoGOGZEzvDzLA</a> 提取码：nh37</p>
+<p>【随堂视频】Linux大型网站高并发架构及自动化运维项目（六）<a href="https://pan.baidu.com/s/1ojlpL2t617kCJVlt4RBWew" target="_blank" rel="noopener">https://pan.baidu.com/s/1ojlpL2t617kCJVlt4RBWew</a> 提取码：vvhp</p>
+<p>【随堂视频】Web安全渗透全套教程 <a href="https://pan.baidu.com/s/1HAkY4tokpqwBAT_i4XVtig" target="_blank" rel="noopener">https://pan.baidu.com/s/1HAkY4tokpqwBAT_i4XVtig</a> 提取码：hdi9</p>
+<p>【随堂视频】Web安全渗透攻防项目实战教程 <a href="https://pan.baidu.com/s/1k-NXxupEo6bV6TmArKnjDg" target="_blank" rel="noopener">https://pan.baidu.com/s/1k-NXxupEo6bV6TmArKnjDg</a> 提取码：njnm</p>
+<p>–工具</p>
+<p>【录制视频】基于阿里云构建企业项目管理及wiki系统【Linux】<a href="https://pan.baidu.com/s/18uoMasBpHlOllknuzVrdpg" target="_blank" rel="noopener">https://pan.baidu.com/s/18uoMasBpHlOllknuzVrdpg</a></p>
+<p>–工具</p>
+<p>Linux云计算相关软件 <a href="https://pan.baidu.com/s/1lDfp3jrQPkZ4SCrFLnnQQg" target="_blank" rel="noopener">https://pan.baidu.com/s/1lDfp3jrQPkZ4SCrFLnnQQg</a> 提取码：9jnq</p>
+<h1 id="软件测试"><a href="#软件测试" class="headerlink" title="软件测试"></a>软件测试</h1><p>–职业发展</p>
+<p>2019软件测试初识与职业发展<a href="https://pan.baidu.com/s/13NxA3Hf1UqkKH272DMAXPA" target="_blank" rel="noopener">https://pan.baidu.com/s/13NxA3Hf1UqkKH272DMAXPA</a> 提取码：wcfy</p>
+<p>–基础</p>
+<p>【录制视频】2019软件测试超详细入门教程<a href="https://pan.baidu.com/s/13p0xOSQXNZiXD4_MhJMUyA" target="_blank" rel="noopener">https://pan.baidu.com/s/13p0xOSQXNZiXD4_MhJMUyA</a> 提取码：8v29</p>
+<p>【录制视频】如何高效准确的搭建测试环境【2019】<a href="https://pan.baidu.com/s/1rcI-Whhq1fC0cHjJZ0QAug" target="_blank" rel="noopener">https://pan.baidu.com/s/1rcI-Whhq1fC0cHjJZ0QAug</a> 提取码：j5sq</p>
+<p>【录制视频】2019测试技术方法【软件测试】~连载<a href="https://pan.baidu.com/s/1DhdTTmEOPOes9Dod_cfblQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1DhdTTmEOPOes9Dod_cfblQ</a> 提取码：i8gp</p>
+<p>【随堂视频】软件测试新手入门教程（一）<a href="https://pan.baidu.com/s/19MWdot8Z-2PCa-DZ8K2usA" target="_blank" rel="noopener">https://pan.baidu.com/s/19MWdot8Z-2PCa-DZ8K2usA</a> 提取码：iv0k</p>
+<p>【随堂视频】全栈测试数据管理与数据库测试（二）<a href="https://pan.baidu.com/s/12hZ0UMq2JtL3xJ3VkHiPnQ" target="_blank" rel="noopener">https://pan.baidu.com/s/12hZ0UMq2JtL3xJ3VkHiPnQ</a> 提取码：b17t</p>
+<p>【随堂视频】SQLServer数据库基础教程 <a href="https://pan.baidu.com/s/1Dz_E-aqYdfGlg_UiWRq6nw" target="_blank" rel="noopener">https://pan.baidu.com/s/1Dz_E-aqYdfGlg_UiWRq6nw</a> 提取码：0xg8</p>
+<p>【随堂视频】Oracle数据库基础教程 <a href="https://pan.baidu.com/s/1pvIa0Ujnm0VvdP1Un66GSQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1pvIa0Ujnm0VvdP1Un66GSQ</a> 提取码：nw9m</p>
+<p>【随堂视频】MySql数据库基础教程 <a href="https://pan.baidu.com/s/1XYRHG1TMsjRKlntCT3HURA" target="_blank" rel="noopener">https://pan.baidu.com/s/1XYRHG1TMsjRKlntCT3HURA</a> 提取码：0x8a</p>
+<p>–进阶</p>
+<p>【随堂视频】全栈通用测试技术（三）<a href="https://pan.baidu.com/s/1wnErWiZckR0ghIdk8IQe6A" target="_blank" rel="noopener">https://pan.baidu.com/s/1wnErWiZckR0ghIdk8IQe6A</a> 提取码：40u7</p>
+<p>【随堂视频】测试开发技术（四）<a href="https://pan.baidu.com/s/142m-fEuJFYOvlrWba6wTow" target="_blank" rel="noopener">https://pan.baidu.com/s/142m-fEuJFYOvlrWba6wTow</a> 提取码：i1zf</p>
+<p>【随堂视频】C++开发入门教程<a href="https://pan.baidu.com/s/1X8P_WqhMg6BKC-U3ELpUaA" target="_blank" rel="noopener">https://pan.baidu.com/s/1X8P_WqhMg6BKC-U3ELpUaA</a> 提取码：sauc</p>
+<p>【随堂视频】Java开发入门教程 <a href="https://pan.baidu.com/s/1KkLSM42xuYQU90u7NcpI9Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1KkLSM42xuYQU90u7NcpI9Q</a> 提取码：2c1f</p>
+<p>【随堂视频】应用程序测试入门到精通 <a href="https://pan.baidu.com/s/1r3DgA0GkLn_EcdfyWOgPqQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1r3DgA0GkLn_EcdfyWOgPqQ</a> 提取码：cbgb</p>
+<p>–高级</p>
+<p>【录制视频】移动端测试，最新版全套【】<a href="https://pan.baidu.com/s/1Xhc1-gpnVDVBkBkYpFWbXw" target="_blank" rel="noopener">https://pan.baidu.com/s/1Xhc1-gpnVDVBkBkYpFWbXw</a> 提取码：bg71</p>
+<p>【录制视频】2019WEB栈测试技术精讲【软件测试】<a href="https://pan.baidu.com/s/1NMJQdbjZV6-EEXlPxroTuA" target="_blank" rel="noopener">https://pan.baidu.com/s/1NMJQdbjZV6-EEXlPxroTuA</a> 提取码：0ur2</p>
+<p>【录制视频】2019接口测试技术精讲【软件测试】<a href="https://pan.baidu.com/s/1VAQGiquwb-92E72VvD89Ew" target="_blank" rel="noopener">https://pan.baidu.com/s/1VAQGiquwb-92E72VvD89Ew</a> 提取码：4ir9</p>
+<p>【录制视频】2019移动端测试技术【软件测试】<a href="https://pan.baidu.com/s/11KrXAvMeEoGzJWO7SqDQrw" target="_blank" rel="noopener">https://pan.baidu.com/s/11KrXAvMeEoGzJWO7SqDQrw</a> 提取码：5110</p>
+<p>【随堂视频】WEB栈自动化测试技术（五）<a href="https://pan.baidu.com/s/14feZ9sse0LsBBaFg2PZ-Tw" target="_blank" rel="noopener">https://pan.baidu.com/s/14feZ9sse0LsBBaFg2PZ-Tw</a> 提取码：94bh</p>
+<p>【随堂视频】2019软件测试：高级自动化测试技术（六）<a href="https://pan.baidu.com/s/1Blztb03Afg1cL3mI7hndNQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1Blztb03Afg1cL3mI7hndNQ</a> 提取码：zknc</p>
+<p>【随堂视频】HP UFT自动化测试入门教程<a href="https://pan.baidu.com/s/1f5Cvfb2yR4XaTNp2HTo7Lg" target="_blank" rel="noopener">https://pan.baidu.com/s/1f5Cvfb2yR4XaTNp2HTo7Lg</a> 提取码：37do</p>
+<p>【随堂视频】HP LoadRunner自动化测试入门教程 <a href="https://pan.baidu.com/s/1ljl3i6BSjJlkXVqVsFqvrQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1ljl3i6BSjJlkXVqVsFqvrQ</a> 提取码：t4xe</p>
+<p>–项目</p>
+<p>【录制视频】2019软件测试项目实战-功能测试 <a href="https://pan.baidu.com/s/1ymU8CvkmKPaDQEpK19Uj6w" target="_blank" rel="noopener">https://pan.baidu.com/s/1ymU8CvkmKPaDQEpK19Uj6w</a> 提取码：y31b</p>
+<p>–工具</p>
+<p>软件测试相关软件 <a href="https://pan.baidu.com/s/1fiD8dilJAt1pPKsXc0zMiw" target="_blank" rel="noopener">https://pan.baidu.com/s/1fiD8dilJAt1pPKsXc0zMiw</a> 提取码：1k0s</p>
+<h1 id="物联网"><a href="#物联网" class="headerlink" title="物联网"></a>物联网</h1><p>–职业发展</p>
+<p>2019物联网初识与职业发展<a href="https://pan.baidu.com/s/14lCIsvWweHH3jeIE-cEH3w" target="_blank" rel="noopener">https://pan.baidu.com/s/14lCIsvWweHH3jeIE-cEH3w</a> 提取码：lkla</p>
+<p>–基础</p>
+<p>【录制视频】2019物联网C语言全套视频~持续更新（精品版）<a href="https://pan.baidu.com/s/1JvPD34ugo2vvS-DLWUrBew" target="_blank" rel="noopener">https://pan.baidu.com/s/1JvPD34ugo2vvS-DLWUrBew</a> 提取码：zr3r</p>
+<p>【录制视频】2019物联网超详细入门教程<a href="https://pan.baidu.com/s/1SuElXII0S2fKuKMPembi7g" target="_blank" rel="noopener">https://pan.baidu.com/s/1SuElXII0S2fKuKMPembi7g</a> 提取码：lh5k</p>
+<p>【录制视频】2019嵌入式高级C语言【物联网】<a href="https://pan.baidu.com/s/1YbRqp1pRSG5d6LvTQaRfLQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1YbRqp1pRSG5d6LvTQaRfLQ</a> 提取码：9cgt</p>
+<p>【录制视频】C++语言从入门到大师【2019物联网】<a href="https://pan.baidu.com/s/1Wfj0M8J7ZxpRoPHcqaHFxg" target="_blank" rel="noopener">https://pan.baidu.com/s/1Wfj0M8J7ZxpRoPHcqaHFxg</a> 提取码：rl48</p>
+<p>–进阶</p>
+<p>【随堂视频】2019嵌入式设备及GUI开发全集【物联网】<a href="https://pan.baidu.com/s/13ZBkie4G5og61TRJRgdc0A" target="_blank" rel="noopener">https://pan.baidu.com/s/13ZBkie4G5og61TRJRgdc0A</a> 提取码：ptuj</p>
+<p>【随堂视频】2019Linux驱动开发精讲【物联网】<a href="https://pan.baidu.com/s/1bBY0_R_uaWYujsoLnM89wg" target="_blank" rel="noopener">https://pan.baidu.com/s/1bBY0_R_uaWYujsoLnM89wg</a> 提取码：hyyw</p>
+<p>【随堂视频】2019Linux高级程序设计全套视频【物联网】<a href="https://pan.baidu.com/s/1OpFP1QqCQOLsp905yarrnw" target="_blank" rel="noopener">https://pan.baidu.com/s/1OpFP1QqCQOLsp905yarrnw</a> 提取码：4ql4</p>
+<p>【随堂视频】2019Linux高级网络程序设计全套视频【物联网】<a href="https://pan.baidu.com/s/1wUaZGE8Sq7eyOGo1TCKRYA" target="_blank" rel="noopener">https://pan.baidu.com/s/1wUaZGE8Sq7eyOGo1TCKRYA</a> 提取码：pith</p>
+<p>–高级</p>
+<p>【随堂视频】2019C++面向对象高级语言程序设计全套视频【物联网】<a href="https://pan.baidu.com/s/1Q5NhzBHo2p8ZBuLdjNnr4A" target="_blank" rel="noopener">https://pan.baidu.com/s/1Q5NhzBHo2p8ZBuLdjNnr4A</a> 提取码：p54b</p>
+<p>【随堂视频】2019数据库知识全套视频教程【物联网】<a href="https://pan.baidu.com/s/1wKHgO4mYh9CN6iWNfCovng" target="_blank" rel="noopener">https://pan.baidu.com/s/1wKHgO4mYh9CN6iWNfCovng</a> 提取码：1avq</p>
+<h1 id="Unity游戏开发"><a href="#Unity游戏开发" class="headerlink" title="Unity游戏开发"></a>Unity游戏开发</h1><p>–职业发展</p>
+<p>2019Unity游戏开发初识与职业发展<a href="https://pan.baidu.com/s/1x0m2JjdVwxXUNrkuHCkA-Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1x0m2JjdVwxXUNrkuHCkA-Q</a> 提取码：pkn4</p>
+<p>–基础</p>
+<p>【随堂视频】Unity游戏开发从入门到精通（小白必看） <a href="https://pan.baidu.com/s/1201NRhSjOnkD41sfKu9ZOg" target="_blank" rel="noopener">https://pan.baidu.com/s/1201NRhSjOnkD41sfKu9ZOg</a> 提取码：sge2</p>
+<p>【随堂视频】2019不耍流氓的C#视频全集【Unity游戏开发】<a href="https://pan.baidu.com/s/1UQ6YvoFIbW5XWHewQUhw9w" target="_blank" rel="noopener">https://pan.baidu.com/s/1UQ6YvoFIbW5XWHewQUhw9w</a> 提取码：xg8f</p>
+<p>–进阶</p>
+<p>【随堂视频】Unity3D第一人称游戏项目实战教程 <a href="https://pan.baidu.com/s/1fENY12e7CpOnLtZIUAGDEQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1fENY12e7CpOnLtZIUAGDEQ</a> 提取码：bghd</p>
+<p>–高级</p>
+<p>【随堂视频】Unity3D游戏图形学从理论到实战教程 <a href="https://pan.baidu.com/s/1GMWKenC3pXUjvVY2USL1hQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1GMWKenC3pXUjvVY2USL1hQ</a> 提取码：psa7</p>
+<p>【随堂视频】Unity RPG游戏从入门到实战全套教程 <a href="https://pan.baidu.com/s/13P4vaFDapbw0pVjIHBs8Mw" target="_blank" rel="noopener">https://pan.baidu.com/s/13P4vaFDapbw0pVjIHBs8Mw</a> 提取码：x8mc</p>
+<p>【随堂视频】Unity游戏架构从入门到实战全套教程 <a href="https://pan.baidu.com/s/10n3Pkee0JofVIbkhOAebtA" target="_blank" rel="noopener">https://pan.baidu.com/s/10n3Pkee0JofVIbkhOAebtA</a> 提取码：z770</p>
+<p>–工具</p>
+<p>Unity相关软件 <a href="https://pan.baidu.com/s/1_zZNfIHrAjDhhplnnyuQ8w" target="_blank" rel="noopener">https://pan.baidu.com/s/1_zZNfIHrAjDhhplnnyuQ8w</a> 提取码：ei1i</p>
+<h1 id="GO"><a href="#GO" class="headerlink" title="GO"></a>GO</h1><p>–职业发展</p>
+<p>2019GO语言初识与职业发展<a href="https://pan.baidu.com/s/1sO-JPaHOi3E-wjr1rHCbFg" target="_blank" rel="noopener">https://pan.baidu.com/s/1sO-JPaHOi3E-wjr1rHCbFg</a> 提取码：19zt</p>
+<p>–基础</p>
+<p>【录制视频】2019GO语言超详细入门教程（笔记+课件+源码）<a href="https://pan.baidu.com/s/1B_i8p-s7FxJj0D-NSKI8xw" target="_blank" rel="noopener">https://pan.baidu.com/s/1B_i8p-s7FxJj0D-NSKI8xw</a> 提取码：r0ni</p>
+<p>【随堂视频】2天玩转比特币教程 <a href="https://pan.baidu.com/s/10fiPjrawLVQsNHfKLxkR_A" target="_blank" rel="noopener">https://pan.baidu.com/s/10fiPjrawLVQsNHfKLxkR_A</a> 提取码：6kqj</p>
+<p>【录制视频】区块链免费体验视频<a href="https://pan.baidu.com/s/1F66Sb0SfWiBEta8A_9V_9w" target="_blank" rel="noopener">https://pan.baidu.com/s/1F66Sb0SfWiBEta8A_9V_9w</a> 提取码：y54u</p>
+<p>【录制视频】区块链从入门到精通（小白必看） <a href="https://pan.baidu.com/s/1ccCWREkq74MoUSvtWtomnA" target="_blank" rel="noopener">https://pan.baidu.com/s/1ccCWREkq74MoUSvtWtomnA</a> 提取码：3qi6</p>
+<p>–进阶</p>
+<p>【录制视频】2019Golang进阶实战编程(学完基础必看)【GO语言】<a href="https://pan.baidu.com/s/1asZeo4xtpjGOfsMmVjV5-g" target="_blank" rel="noopener">https://pan.baidu.com/s/1asZeo4xtpjGOfsMmVjV5-g</a> 提取码：53r8</p>
+<h1 id="网络安全"><a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><p>–职业发展</p>
+<p>2019网络安全初识与职业发展<a href="https://pan.baidu.com/s/1CAzO8IWxzBj-bOZlJ2eFVg" target="_blank" rel="noopener">https://pan.baidu.com/s/1CAzO8IWxzBj-bOZlJ2eFVg</a> 提取码：lwkq</p>
+<p>–基础</p>
+<p>【录制视频】网络安全课程新手入门必看<a href="https://pan.baidu.com/s/1ChmVSwyhw2ckqBfjknvCyQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1ChmVSwyhw2ckqBfjknvCyQ</a> 提取码：yep1</p>
+<p>【录制视频】2019网络安全入门教程+学习资料<a href="https://pan.baidu.com/s/1qixjgQr_S3aCE6MgmQ8EuQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1qixjgQr_S3aCE6MgmQ8EuQ</a></p>
+<p>【录制视频】2019Windows服务安全精讲【网络安全】<a href="https://pan.baidu.com/s/1lxMZ1JXzJ6i2xil-3obJdQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1lxMZ1JXzJ6i2xil-3obJdQ</a> 提取码：vh9s</p>
+<p>–项目</p>
+<p>【录制视频】2019网络安全：渗透测试项目实战-DC<a href="https://pan.baidu.com/s/1ofk7jxhDsWZBBsfwU9eudg" target="_blank" rel="noopener">https://pan.baidu.com/s/1ofk7jxhDsWZBBsfwU9eudg</a> 提取码：huhc</p>
+<p>–工具</p>
+<p>网络安全相关软件<a href="https://pan.baidu.com/s/1rXcUyIAkDrj13kOAP1qyRg" target="_blank" rel="noopener">https://pan.baidu.com/s/1rXcUyIAkDrj13kOAP1qyRg</a> 提取码：xktf</p>
+<h1 id="互联网营销"><a href="#互联网营销" class="headerlink" title="互联网营销"></a>互联网营销</h1><p>–职业发展</p>
+<p>【录制视频】SEM搜索广告是？什么是信息流广告？【网络营销】<a href="https://pan.baidu.com/s/1FJTHHt7vKXhkzcoxn31QCA" target="_blank" rel="noopener">https://pan.baidu.com/s/1FJTHHt7vKXhkzcoxn31QCA</a></p>
+<p>【录制视频】新媒体运营是什么？【网络营销】<a href="https://pan.baidu.com/s/1qqyPkMN4Hg5wMFp80w5aSA" target="_blank" rel="noopener">https://pan.baidu.com/s/1qqyPkMN4Hg5wMFp80w5aSA</a></p>
+<p>–基础</p>
+<p>【录制视频】2019互联网广告入门解析【互联网营销】<a href="https://pan.baidu.com/s/1JPZcPBWDyv5OoHKyRnYo-w" target="_blank" rel="noopener">https://pan.baidu.com/s/1JPZcPBWDyv5OoHKyRnYo-w</a> 提取码：k2b4</p>
+<p>【录制视频】2019信息流广告定向常见问题答疑【互联网营销】<a href="https://pan.baidu.com/s/1UVfS1cPK2erXpkOMMyORWQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1UVfS1cPK2erXpkOMMyORWQ</a> 提取码：6al4</p>
+<p>【随堂视频】2019SEM竞价从0到1【互联网营销】 <a href="https://pan.baidu.com/s/15aiZKZ1w-w0ZZpt-riTm6A" target="_blank" rel="noopener">https://pan.baidu.com/s/15aiZKZ1w-w0ZZpt-riTm6A</a> 提取码：yh5v</p>
+<p>【录制视频】网络营销与seo基础课程 <a href="http://pan.baidu.com/s/1b7W4KA" target="_blank" rel="noopener">http://pan.baidu.com/s/1b7W4KA</a></p>
+<p>–进阶</p>
+<p>【录制视频】2019新媒体之短视频运营精讲【互联网营销】<a href="https://pan.baidu.com/s/1DFLFt84mx0TPrM21VzMl1g" target="_blank" rel="noopener">https://pan.baidu.com/s/1DFLFt84mx0TPrM21VzMl1g</a> 提取码：v0vf</p>
+<p>【随堂视频】2019腾讯社交广告从0到1【互联网营销】<a href="https://pan.baidu.com/s/1H62iber62bwXj_svzon7WQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1H62iber62bwXj_svzon7WQ</a> 提取码：1jf9</p>
+<p>【录制视频】2019新媒体运营超详细入门教程【互联网营销】<a href="https://pan.baidu.com/s/1rPb8Wec4XbhN6FF1JA9rQg" target="_blank" rel="noopener">https://pan.baidu.com/s/1rPb8Wec4XbhN6FF1JA9rQg</a> 提取码：2w7f</p>
+<h1 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h1><p>–基础</p>
+<p>【随堂视频】PHP教程-PHP从入门到精通（小白必看） <a href="https://pan.baidu.com/s/1dkxwarXcG22P9-BYaX8ccQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1dkxwarXcG22P9-BYaX8ccQ</a> 提取码：s4zx</p>
+<p>【随堂视频】PHP教程-HTML入门到实战 <a href="https://pan.baidu.com/s/1EM3nuyNMEvLPhzw_580STQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1EM3nuyNMEvLPhzw_580STQ</a> 提取码：lgv8</p>
+<p>【随堂视频】PHP教程-CSS入门到实战 <a href="https://pan.baidu.com/s/1J2rWaMx5r6CPhOLHH-kYSA" target="_blank" rel="noopener">https://pan.baidu.com/s/1J2rWaMx5r6CPhOLHH-kYSA</a> 提取码：sjn7</p>
+<p>【随堂视频】PHP教程-Web前端入门到实战 <a href="https://pan.baidu.com/s/1KR7cHxIRdGrXbVcW6-lPSw" target="_blank" rel="noopener">https://pan.baidu.com/s/1KR7cHxIRdGrXbVcW6-lPSw</a> 提取码：ofqv</p>
+<p>–高级</p>
+<p>【随堂视频】PHP教程-PHP高级实战教程全集 <a href="https://pan.baidu.com/s/15Wx2KYuw0HuNXTyOQ5zotQ" target="_blank" rel="noopener">https://pan.baidu.com/s/15Wx2KYuw0HuNXTyOQ5zotQ</a> 提取码：o1ew</p>
+<p>【随堂视频】PHP教程-JavaScript入门到实战 <a href="https://pan.baidu.com/s/1Sa56NABhAB-Scm5ZolFFbg" target="_blank" rel="noopener">https://pan.baidu.com/s/1Sa56NABhAB-Scm5ZolFFbg</a> 提取码：a022</p>
+<p>【随堂视频】PHP教程-PHP高级语法全集 <a href="https://pan.baidu.com/s/15Z0swEj41ptYdnXLs24vZA" target="_blank" rel="noopener">https://pan.baidu.com/s/15Z0swEj41ptYdnXLs24vZA</a> 提取码：5h3r</p>
+<p>【随堂视频】PHP教程-Restful接口开发实战教程 <a href="https://pan.baidu.com/s/1rMisGuIppvlk42CwX3yNYQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1rMisGuIppvlk42CwX3yNYQ</a> 提取码：c1zc</p>
+<p>【随堂视频】PHP教程-阿里云环境搭建以及项目上线实战教程 <a href="https://pan.baidu.com/s/1lrwIPCD2NIhQ4xUEBVTvXg" target="_blank" rel="noopener">https://pan.baidu.com/s/1lrwIPCD2NIhQ4xUEBVTvXg</a> 提取码：y5cl</p>
+<p>【随堂视频】PHP教程-高性能Linux服务器搭建实战 <a href="https://pan.baidu.com/s/1_8CZl_SO-rS1s4wNnb4I4A" target="_blank" rel="noopener">https://pan.baidu.com/s/1_8CZl_SO-rS1s4wNnb4I4A</a> 提取码：kphq</p>
+<p>【随堂视频】PHP教程-PHP第三方登录-微博登录实战教程 <a href="https://pan.baidu.com/s/1SBKvFAAhvqRyFt90SH1u1Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1SBKvFAAhvqRyFt90SH1u1Q</a> 提取码：e3no</p>
+<p>【随堂视频】PHP教程-PHP短信验证实战教程 <a href="https://pan.baidu.com/s/18u-3WopJinSN98NaKDJ2Gg" target="_blank" rel="noopener">https://pan.baidu.com/s/18u-3WopJinSN98NaKDJ2Gg</a> 提取码：w6qz</p>
+<p>【随堂视频】PHP教程-PHP千万级秒杀项目实战教程 <a href="https://pan.baidu.com/s/1kDO41Z--vUEqHXMMVoHyAg" target="_blank" rel="noopener">https://pan.baidu.com/s/1kDO41Z--vUEqHXMMVoHyAg</a> 提取码：d9my</p>
+<p>【随堂视频】PHP教程-PHP异步通信框架Swoole实战教程 <a href="https://pan.baidu.com/s/1xDr2gZZ8a5GzYDUN14Q4Bg" target="_blank" rel="noopener">https://pan.baidu.com/s/1xDr2gZZ8a5GzYDUN14Q4Bg</a> 提取码：z6ff</p>
+<p>【随堂视频】PHP教程-PHP邮箱验证实战教程 <a href="https://pan.baidu.com/s/1JUGlq6v03qxakYsWsBFwfA" target="_blank" rel="noopener">https://pan.baidu.com/s/1JUGlq6v03qxakYsWsBFwfA</a> 提取码：skl0</p>
+<p>【随堂视频】PHP教程-PHP语法与数据库全套视频 <a href="https://pan.baidu.com/s/17Kp62tZf2Cs5qORsKyNKng" target="_blank" rel="noopener">https://pan.baidu.com/s/17Kp62tZf2Cs5qORsKyNKng</a> 提取码：rg91</p>
+<p>【随堂视频】PHP教程-ThinkPHP5.0入门到精通全集 <a href="https://pan.baidu.com/s/1UtoKZbOWU5n8lAH1m9njXg" target="_blank" rel="noopener">https://pan.baidu.com/s/1UtoKZbOWU5n8lAH1m9njXg</a> 提取码：qy88</p>
+<p>【随堂视频】PHP教程-PHP之Laravel框架全套教程 <a href="https://pan.baidu.com/s/116zllZKr60h0oQPfOWiTzg" target="_blank" rel="noopener">https://pan.baidu.com/s/116zllZKr60h0oQPfOWiTzg</a> 提取码：xjg3</p>
+<p>–工具</p>
+<p>PHP相关软件 <a href="https://pan.baidu.com/s/1n4aogYJZ4LMyq-gdUrlg5A" target="_blank" rel="noopener">https://pan.baidu.com/s/1n4aogYJZ4LMyq-gdUrlg5A</a> 提取码：br6p</p>
+<h1 id="好程序员"><a href="#好程序员" class="headerlink" title="好程序员"></a>好程序员</h1><p>–Java</p>
+<p>【录制视频-入学】好程序员Java入门预习视频<a href="https://pan.baidu.com/s/1MOA4xqgTUN4sb5jvhgQJxQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1MOA4xqgTUN4sb5jvhgQJxQ</a> 提取码：3bkf</p>
+<p>–Web前端</p>
+<p>【录制视频-入学】好程序员Web前端入门预习视频<a href="https://pan.baidu.com/s/1WyY9Pe4BWOjW4MuQvxZY8A" target="_blank" rel="noopener">https://pan.baidu.com/s/1WyY9Pe4BWOjW4MuQvxZY8A</a> 提取码：2nr6</p>
+<p>–Python</p>
+<p>【录制视频-入学】好程序员Python入门预习视频<a href="https://pan.baidu.com/s/13tJPgCWgokZwdNUhDpY9Kw" target="_blank" rel="noopener">https://pan.baidu.com/s/13tJPgCWgokZwdNUhDpY9Kw</a></p>
+<p>【录制视频】【好程序员】2019Python超详细入门教程（精华版）<a href="https://pan.baidu.com/s/16aWGYQ0sIYSy0O7wk82Mmg" target="_blank" rel="noopener">https://pan.baidu.com/s/16aWGYQ0sIYSy0O7wk82Mmg</a> 提取码：drvy</p>
+<p>【随堂视频】【好程序员】2019Python全套视频教程<a href="https://pan.baidu.com/s/1W6Qx4aJiaylB1aj6U-fX1g" target="_blank" rel="noopener">https://pan.baidu.com/s/1W6Qx4aJiaylB1aj6U-fX1g</a></p>
+<p>【随堂视频】【好程序员】2019Django全套视频教程<a href="https://pan.baidu.com/s/1941tXusnW_uapOvYh8D7bg" target="_blank" rel="noopener">https://pan.baidu.com/s/1941tXusnW_uapOvYh8D7bg</a> 提取码：9tgt</p>
+<h1 id="云计算"><a href="#云计算" class="headerlink" title="云计算"></a>云计算</h1><p>【录制视频-入学】好程序员Linux云计算入门预习视频<a href="https://pan.baidu.com/s/1PX4HD2IX3IocHz3MtcSpTw" target="_blank" rel="noopener">https://pan.baidu.com/s/1PX4HD2IX3IocHz3MtcSpTw</a></p>
+<p>其它</p>
+<p>【录制视频】2019PMP项目管理视频 <a href="https://pan.baidu.com/s/1Xk7Lp2F1GlN1UJ1jOiNhEQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1Xk7Lp2F1GlN1UJ1jOiNhEQ</a> 提取码：h43e</p>
+<p>【录制视频】就业指导课-面试技巧和职场注意事项 <a href="https://pan.baidu.com/s/1jKcjF1s" target="_blank" rel="noopener">https://pan.baidu.com/s/1jKcjF1s</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/12/28/%E6%97%A5%E5%B8%B8%E6%80%BB%E7%BB%93/" rel="prev" title="日常总结">
+      <i class="fa fa-chevron-left"></i> 日常总结
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/12/28/vm12%E4%B8%8Elinux6%E7%9A%84%E5%AE%89%E8%A3%85(1)/" rel="next" title="vm12与linux6的安装(1)">
+      vm12与linux6的安装(1) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JAVA"><span class="nav-number">1.</span> <span class="nav-text">JAVA</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML5"><span class="nav-number">2.</span> <span class="nav-text">HTML5</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python"><span class="nav-number">3.</span> <span class="nav-text">Python</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#大数据"><span class="nav-number">4.</span> <span class="nav-text">大数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UI"><span class="nav-number">5.</span> <span class="nav-text">UI</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux云计算"><span class="nav-number">6.</span> <span class="nav-text">Linux云计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#软件测试"><span class="nav-number">7.</span> <span class="nav-text">软件测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#物联网"><span class="nav-number">8.</span> <span class="nav-text">物联网</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Unity游戏开发"><span class="nav-number">9.</span> <span class="nav-text">Unity游戏开发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GO"><span class="nav-number">10.</span> <span class="nav-text">GO</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络安全"><span class="nav-number">11.</span> <span class="nav-text">网络安全</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#互联网营销"><span class="nav-number">12.</span> <span class="nav-text">互联网营销</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP"><span class="nav-number">13.</span> <span class="nav-text">PHP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#好程序员"><span class="nav-number">14.</span> <span class="nav-text">好程序员</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#云计算"><span class="nav-number">15.</span> <span class="nav-text">云计算</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Forbes-v"
+      src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577461266205&di=1c6b53212223ecf3fd4de5ccdc1e037c&imgtype=0&src=http%3A%2F%2Fwww.17qq.com%2Fimg_qqtouxiang%2F49052337.jpeg">
+  <p class="site-author-name" itemprop="name">Forbes-v</p>
+  <div class="site-description" itemprop="description">This is MyBlog  Notes</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Forbes-v</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,0' opacity='0.8' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/instantsearch.js@2/dist/instantsearch.min.css">
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@2/dist/instantsearch.min.js"></script>
+<script src="/js/algolia-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

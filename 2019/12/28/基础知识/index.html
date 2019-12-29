@@ -55,7 +55,7 @@
 <meta property="og:description" content="[toc] JavaScriptday 1">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-12-28T05:45:46.343Z">
-<meta property="article:modified_time" content="2019-12-28T07:11:03.911Z">
+<meta property="article:modified_time" content="2019-12-29T06:20:55.961Z">
 <meta property="article:author" content="Forbes-v">
 <meta name="twitter:card" content="summary">
 
@@ -231,10 +231,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-12-28 05:45:46 / 修改时间：07:11:03" itemprop="dateCreated datePublished" datetime="2019-12-28T05:45:46Z">2019-12-28</time>
+              <time title="创建时间：2019-12-28 05:45:46" itemprop="dateCreated datePublished" datetime="2019-12-28T05:45:46Z">2019-12-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-29 06:20:55" itemprop="dateModified" datetime="2019-12-29T06:20:55Z">2019-12-29</time>
+              </span>
 
           
 
@@ -515,6 +521,8 @@
 <p>预处理查询</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">	<span class="comment">//尝试连接数据库</span></span><br><span class="line">	$dsn = <span class="string">"mysql:host=localhost;dbname=php46"</span>;</span><br><span class="line">	$pdo = <span class="keyword">new</span> PDO($dsn,<span class="string">'root'</span>,<span class="string">''</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//设置错误模式为warning</span></span><br><span class="line">	<span class="comment">//$pdo-&gt;setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);</span></span><br><span class="line"></span><br><span class="line">	$pdo-&gt;exec(<span class="string">"set names utf8"</span>);</span><br><span class="line"></span><br><span class="line">	$stmt = $pdo-&gt;prepare(<span class="string">"select * from user1 order by id asc"</span>);</span><br><span class="line"></span><br><span class="line">	$stmt-&gt;bindColumn(<span class="number">1</span>,$id);</span><br><span class="line">	$stmt-&gt;bindColumn(<span class="number">2</span>,$username);</span><br><span class="line">	$stmt-&gt;bindColumn(<span class="number">3</span>,$pwd);</span><br><span class="line">	$stmt-&gt;bindColumn(<span class="number">4</span>,$level);</span><br><span class="line">	$stmt-&gt;bindColumn(<span class="number">5</span>,$addtime);</span><br><span class="line">	<span class="comment">//发送sql语句</span></span><br><span class="line">	$result = $stmt-&gt;execute();</span><br><span class="line">	<span class="comment">//var_dump($result);</span></span><br><span class="line">	<span class="comment">//var_dump();</span></span><br><span class="line">	<span class="keyword">if</span>($stmt-&gt;rowCount())&#123;</span><br><span class="line">		echo <span class="string">'&lt;table border="1" align="center" width="800px"&gt;'</span>;</span><br><span class="line">		echo <span class="string">'&lt;tr&gt;'</span>;</span><br><span class="line">			echo <span class="string">'&lt;th&gt;编号&lt;/th&gt;'</span>;</span><br><span class="line">			echo <span class="string">'&lt;th&gt;用户名&lt;/th&gt;'</span>;</span><br><span class="line">			echo <span class="string">'&lt;th&gt;密码&lt;/th&gt;'</span>;</span><br><span class="line">			echo <span class="string">'&lt;th&gt;权限&lt;/th&gt;'</span>;</span><br><span class="line">			echo <span class="string">'&lt;th&gt;时间&lt;/th&gt;'</span>;</span><br><span class="line">		echo <span class="string">'&lt;/tr&gt;'</span>;</span><br><span class="line">		<span class="comment">//$row = $stmt-&gt;fetch(PDO::FETCH_ASSOC);</span></span><br><span class="line">		<span class="comment">//echo PDO::FETCH_ASSOC;</span></span><br><span class="line">		<span class="comment">//var_dump($row);</span></span><br><span class="line">		<span class="comment">//遍历输出</span></span><br><span class="line">			<span class="keyword">while</span>($stmt-&gt;fetch())&#123;</span><br><span class="line">				echo <span class="string">'&lt;tr&gt;'</span>; </span><br><span class="line">					echo <span class="string">'&lt;td&gt;'</span>.$id.<span class="string">'&lt;/td&gt;'</span>;	</span><br><span class="line">					echo <span class="string">'&lt;td&gt;'</span>.$username.<span class="string">'&lt;/td&gt;'</span>;	</span><br><span class="line">					echo <span class="string">'&lt;td&gt;'</span>.$pwd.<span class="string">'&lt;/td&gt;'</span>;	</span><br><span class="line">					echo <span class="string">'&lt;td&gt;'</span>.$level.<span class="string">'&lt;/td&gt;'</span>;	</span><br><span class="line">					echo <span class="string">'&lt;td&gt;'</span>.$addtime.<span class="string">'&lt;/td&gt;'</span>;	</span><br><span class="line">				echo <span class="string">'&lt;/tr&gt;'</span>; 	</span><br><span class="line">			&#125;</span><br><span class="line">		echo <span class="string">'&lt;/table&gt;'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;<span class="keyword">catch</span>(PDOExecption $e)&#123;</span><br><span class="line">	echo $e-&gt;getMessage();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+
+
 <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><h2 id="day1"><a href="#day1" class="headerlink" title="day1"></a>day1</h2><h3 id="1-系统的安装"><a href="#1-系统的安装" class="headerlink" title="1.系统的安装:"></a>1.系统的安装:</h3><p>​    参考文档</p>
 <h3 id="1-登陆系统"><a href="#1-登陆系统" class="headerlink" title="1.登陆系统:"></a>1.登陆系统:</h3><p>​    login as :root<br>​        输入密码:没有* 直接输入即可(因为为了提高系统安全)<br>​    1.我们为什么需要使用第三方工具连接我们的linux,因为在linux的系统中<br>​    不能复制和粘贴,因为在linux系统中,我们只用键盘<br>​    2.我们也可以使用类似putty的第三方工具进行连接到我们的linux<br>​    3.我们在连接的时候,会发现我们linux中的网卡并没有打开<br>​    4.我们需要打开eth0网卡<br>​        详细的步骤:<br>​         1).开启网卡:<br>​            我们需要找到一个文件,这个文件在:<br>​            [root@localhost /]# cd /etc/sysconfig/network-scripts/<br>​            </p>
 <pre><code>        [root@localhost network-scripts]# ls
@@ -627,49 +635,464 @@ linux系统中的命令
         第四列:文件所有组
         第五列:文件大小
         第六列:文件的修改时间或访问时间
-        第七列:文件名
+        第七列:文件名</code></pre><h2 id="day2"><a href="#day2" class="headerlink" title="day2"></a>day2</h2><table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">格式</th>
+<th align="center">参数</th>
+<th align="center">权限</th>
+<th align="center">功能</th>
+<th align="center">举例</th>
+<th>注意</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">cd</td>
+<td align="center">cd  ./  cd ../  cd ../../<br/>            cd /aa/   cd /bb</td>
+<td align="center"></td>
+<td align="center">所有用户</td>
+<td align="center">切换目录</td>
+<td align="center">1.cd -  返回上一次的工作目录<br/>            2.cd ~  回家 等价于 cd<br/>            3.cd /  切换到根目录</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">useradd</td>
+<td align="center">useradd 用户名</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">添加一个用户</td>
+<td align="center">cd ~xaiofengfeng 去指定用户的家目录</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">passwd</td>
+<td align="center">passwd 用户名</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">给新用户设置密码</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">su</td>
+<td align="center">su 用户名</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">切换用户</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">userdel</td>
+<td align="center">userdel [-r] 用户名</td>
+<td align="center">-r 删除用户及用户家目录</td>
+<td align="center"></td>
+<td align="center">删除用户</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">cp</td>
+<td align="center">cp [-r] 源文件或目录 目录文件</td>
+<td align="center">-r参数 如果加该参数表示的是可以复制目录</td>
+<td align="center">所有用户</td>
+<td align="center">复制文件或目录</td>
+<td align="center">[root@localhost ~]# cp -r bbb.php ddd/</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">mv</td>
+<td align="center">mv 源文件或目录 目标目录</td>
+<td align="center"></td>
+<td align="center">所有用户</td>
+<td align="center">剪切文件,如果目标位置不是目录文件.那么就是重命名</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">rm</td>
+<td align="center">rm [-rf] 目录或文件</td>
+<td align="center">-r:删除目录;-rf:强制删除</td>
+<td align="center">所有用户</td>
+<td align="center">删除文件或目录</td>
+<td align="center">rm -rf aaa.php<br>连续删除文件或目录  [root@localhost ~]# rm -rf bbb.php ccc.php ddd.php<br/>删除当前目录中的所有文件或目录 [root@localhost bbb]# rm -rf *<br/>删除指定字母开头的文件[root@localhost bbb]# rm -rf aa*</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">rmdir</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">只能删除空目录</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">touch</td>
+<td align="center">touch 文件名</td>
+<td align="center"></td>
+<td align="center">所有用户</td>
+<td align="center">创建一个空文件</td>
+<td align="center">创建多个文件:touch a.php 3.php</td>
+<td>在linux系统中没有扩展名概念,扩展名是给我们用户看的</td>
+</tr>
+<tr>
+<td align="center">mkdir</td>
+<td align="center">mkdir [-p 递归创建] 目录名</td>
+<td align="center"></td>
+<td align="center">所有用户</td>
+<td align="center">创建目录</td>
+<td align="center">1.同时创建多个目录<br/>            mkdir aaa bbb ccc<br/>        2.递归创建:<br/>            mkdir -p a/b/c/d</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">history</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">所有用户</td>
+<td align="center">显示历史命令</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">clear</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">所有用户</td>
+<td align="center">清屏</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">pwd</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">所有用户</td>
+<td align="center">显示当前所在目录</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">cat</td>
+<td align="center">cat 文件名</td>
+<td align="center"></td>
+<td align="center">所有用户</td>
+<td align="center">显示文件内容</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">more</td>
+<td align="center">more 文件名</td>
+<td align="center">关于翻页:<br/>                    f(空格)向下翻页<br/>                    b      向上翻页<br/>                    回车   一次向下移动一行</td>
+<td align="center">所有用户</td>
+<td align="center">分页显示文件内容</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">head</td>
+<td align="center">head -n 文件名</td>
+<td align="center">-n 从头开始显示几行<br/>                如果没有参数,表示的是默认显示10行</td>
+<td align="center">所有用户</td>
+<td align="center">从头显示多少</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">tail</td>
+<td align="center">tail -n(行数) 文件名</td>
+<td align="center"></td>
+<td align="center">所有用户</td>
+<td align="center">显示文件尾多好行</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">ln</td>
+<td align="center">ln -s 源文件 目标文件</td>
+<td align="center">如果加了 -s参数表示的是 创建软连接<br>软连接就是类似于我们window系统中的快捷方式<br/>                        如果连接文件被删除,原文件不会受到影响<br/>                        如果源文件被删除,连接文件存在但不能使用,如果在新创建一个和源文件同名文件,链接文件可恢复使用<br/>                        如果链接的是目录文件:删除链接目录文件不会影响源目录文件;删除链接目录内文件,源目录内文件也会被删除.删除源目录文件里面文件,链接目录里面文件也会被删除<br>如果不加 -s参数表示的是 创建硬链接<br/>                    如果删除源文件,硬链接不会受到影响<br/>                    硬链接是如果其中一个文件的内容发生改变,所有文件的内容都会一同改变</td>
+<td align="center">所有用户</td>
+<td align="center">创建软硬连接</td>
+<td align="center"></td>
+<td>软硬链接区别:软连接源文件删除后,链接文件不可用(除非新建立与删除文件同名文件,才可恢复使用);硬链接,删除任何一个,另一个都不受影响<br/>                   相同点:内容改变,其他文件也会相应改变</td>
+</tr>
+<tr>
+<td align="center">r(read)</td>
+<td align="center">可读</td>
+<td align="center">对文件意义:查看文件内容<br>对目录意义:可列出里边的内容</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">w(write)</td>
+<td align="center">可写</td>
+<td align="center">对文件意义:修改文件内容<br>对目录意义:修改文件内容</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">x(execute)</td>
+<td align="center">可执行</td>
+<td align="center">对文件意义:是否可执行<br>对目录意义:是否可进入目录</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">chmod</td>
+<td align="center">chmod{u|g|o|a}{+|-|={r|w|x}} 文件或目录</td>
+<td align="center">u:user 文件所有者权限设置<br/>                g:group文件所有组权限设置<br/>                o:other其他人权限设置<br/>                a:all  所有权限设置<br>使用数字的方式设置权限:r:4;w:2;x:1;</td>
+<td align="center">root</td>
+<td align="center"></td>
+<td align="center">[root@localhost bbb]# chmod u+r aaa.php<br/>                [root@localhost bbb]# chmod u-r aaa.php<br/>                [root@localhost bbb]# chmod u=rwx aaa.php</td>
+<td>使用=进行更改权限的时候,覆盖文件或目录的权限</td>
+</tr>
+<tr>
+<td align="center">chown</td>
+<td align="center">chown 用户.组名 文件或目录</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">更改文件的所有者权限</td>
+<td align="center">[root@localhost ~]# chown xiaojingang bbb.php<br>[root@localhost ~]# chown xiaojingang.xiaojingang ccc.php<br/>            同时更改文件的所有者和文件的所有组<br>[root@localhost ~]# chown .dajingang ccc.php<br/>            只更改文件所有组</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">chgrp</td>
+<td align="center">chgrp 用户组 文件或目录</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">只更改文件或目录的文件所有组</td>
+<td align="center">[root@localhost ~]# chgrp xiaojingang ddd.php</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">man</td>
+<td align="center">man 命令</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">帮助命令</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">find</td>
+<td align="center">find 搜索范围 匹配条件</td>
+<td align="center">-name  表示的是按照文件名去查找</td>
+<td align="center"></td>
+<td align="center">文件搜索</td>
+<td align="center">命令    检索的路径     搜索条件    搜索的文件名<br/>                [root@localhost ~]# find    /tmp            -name        yum.log</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*  匹配任意字符任意次数<br/>                    [root@localhost ~]# find ~ -name ‘b*.php’</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>搜索的文件必须加单引号或双引号</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">?  匹配字符一次<br/>                    [root@localhost ~]# find ~ -name ‘bb5?7.php’</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">find 路径 -user 用户</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">按照文件的用户所有者去查文件</td>
+<td align="center">[root@localhost ~]# find ~ -user xiaojingang</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">find 路径 -group 组名</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">按照文件的所有组查文件</td>
+<td align="center">[root@localhost ~]# find ~ -group dajingang</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">find 路径 -size +40k<br/>                    +40k 大于40k<br/>                    -40k 小于40k</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">按照文件大小查找</td>
+<td align="center">[root@localhost ~]# find ~ -size +80k</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">find -perm 000</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">通过权限查找</td>
+<td align="center">[root@localhost ~]# find ~ -perm 777</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">find 路径 -type 类型</td>
+<td align="center">l类型表示的是软连接文件<br/>                    d类型表示的是目录文件<br/>                    f类型表示的是普通文件</td>
+<td align="center"></td>
+<td align="center">按照类型查找</td>
+<td align="center">[root@localhost ~]# find ~ -type 类型</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">find 路径 -iname 文件名</td>
+<td align="center">-a(and)  -o(or)</td>
+<td align="center"></td>
+<td align="center">按照文件名查找,不区分大小写</td>
+<td align="center">[root@localhost ~]# find ~ -iname BBB.php<br>find ~ -name ‘a<em>‘ -a size -2k<br/>                find ~ -name ‘a</em>‘ -a size +2k<br/>                find ~ -name ‘a*’ -o size +2k</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">grep</td>
+<td align="center">grep -iv 要匹配的字符 文件</td>
+<td align="center">-i 不区分大小写<br/>                -v 反向过滤(取反)</td>
+<td align="center"></td>
+<td align="center">过滤内容在文件中匹配字符串,并输出</td>
+<td align="center">[root@localhost ~]# grep -iv LOVE qingzhen.zz</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">gzip</td>
+<td align="center">gzip 文件名</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">压缩文件</td>
+<td align="center"></td>
+<td>压缩后的文件个是.gz<br>压缩后不会保留源文件</td>
+</tr>
+<tr>
+<td align="center">gunzip</td>
+<td align="center">gunzip 压缩文件</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">解压文件</td>
+<td align="center"></td>
+<td>解压后不保留压缩文件</td>
+</tr>
+<tr>
+<td align="center">tar</td>
+<td align="center">tar 参数 压缩后的文件 目录或文件</td>
+<td align="center">-c 打包<br/>                -x 解包<br/>                -v 显示相信信息<br/>                -f 指定文件名<br/>                -z 打包同时压缩 .gz<br/>                -j 打包同时压缩 .gz2</td>
+<td align="center"></td>
+<td align="center">打包</td>
+<td align="center">打包 [root@localhost ys]# tar -cf aaa.php.tar aaa.php<br>解包 [root@localhost ys]# tar -xf aaa.php.tar<br>批量打包:<br/>                [root@localhost images]# touch 1.jpg 2.jpg 3.jpg<br/>                [root@localhost images]# ls<br/>                1.jpg  2.jpg  3.jpg<br/>                [root@localhost images]# touch 4.mp4<br/>                [root@localhost images]# ls<br/>                1.jpg  2.jpg  3.jpg  4.mp4<br/>                [root@localhost images]# tar -cf img.tar *.jpg<br/>                [root@localhost images]# ls<br/>                1.jpg  2.jpg  3.jpg  4.mp4  img.tar<br/>                [root@localhost images]# rm -rf *.jpg<br/>                [root@localhost images]# ls<br/>                4.mp4  img.tar<br/>                [root@localhost images]# tar -xf img.tar<br/>                [root@localhost images]# ls<br/>                1.jpg  2.jpg  3.jpg  4.mp4  img.tar</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">bzip2</td>
+<td align="center">bzip2 -k 文件</td>
+<td align="center">-k 产生压缩文件后保留源文件</td>
+<td align="center"></td>
+<td align="center">压缩文件</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">bunzip2</td>
+<td align="center">bzip2 -k 压缩后的文件</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">压缩文件</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">ping</td>
+<td align="center"></td>
+<td align="center">参数:-c  指定发送次数</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">[root@localhost images]# ping -c3 192.168.17.123</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">ifconfig</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">查看当前网卡的ip地址</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">临设设置ip</td>
+<td align="center">ifconfig eth0 192.168.17.234</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">setup</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">通过linux命令来设置ip</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">shutdown!!!!!!!!</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">关机命令</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">reboot</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">重启命令</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">rpm</td>
+<td align="center">rpm -ivh 软件包</td>
+<td align="center">-i 安装<br/>                    -v 显示详细信息<br/>                    -h 显示进度<br/>                    -U 升级<br/>                    -q 显示程序是否安装<br/>                    -qi显示安装后包名的详细信息<br/>                    -e 卸载软件</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td>依赖安装<br/>                    [root@localhost Packages]# rpm -ivh apr-1.3.9-3.el6_1.2.i686.rpm<br>查看是否安装:<br/>                    rpm -q httpd<br/>                如果能看到如下,表示的是安装成功<br/>                [root@localhost Packages]# rpm -q httpd<br/>                httpd-2.2.15-15.el6.centos.1.i686</td>
+</tr>
+</tbody></table>
+<p>软件包管理<br>            源码包:<br>                优点:开源,自由定制,效率更高<br>                缺点:编译时间长,一旦报错,很难解决<br>            二进制包(编译后的包):rpm包<br>                优点:安装速度快,简单<br>                缺点:自定义差,依赖性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">光驱的挂载</span><br><span class="line">	1.设置挂载点  在&#x2F;mnt&#x2F; 下 创建一个目录 cdrom目录</span><br><span class="line">	2.挂载光驱:命令 mount</span><br><span class="line">		光驱位置:&#x2F;dev&#x2F;sr0</span><br><span class="line">		挂载:mount &#x2F;dev&#x2F;sr0 &#x2F;mnt&#x2F;cdrom </span><br><span class="line">		[root@localhost &#x2F;]# mount &#x2F;dev&#x2F;sr0 &#x2F;mnt&#x2F;cdrom&#x2F;</span><br><span class="line">		mount: block device &#x2F;dev&#x2F;sr0 is write-protected, mounting read-only</span><br><span class="line">	[root@localhost Packages]# ls |grep http</span><br><span class="line">	httpd-2.2.15-15.el6.centos.1.i686.rpm</span><br></pre></td></tr></table></figure>
 
-    命令名称:cd
-        执行权限:所有用户
-        功能描述:切换目录
-        语法格式: 
-            cd  ./  cd ../  cd ../../
-            cd /aa/   cd /bb
-        高级用法:
-            1.cd -  返回上一次的工作目录
-            2.cd ~  回家 等价于 cd
-            3.cd /  切换到根目录
-                添加一个用户
-                    useradd 用户名
-                cd ~xaiofengfeng 去指定用户的家目录
-                su 用户名  切换用户
-            删除用户 userdel -r 删除用户及用户家目录
 
-    命令名称:pwd
-        执行权限:所有用户
-        功能描述:显示当前所在目录
-    命令名称:clear
-        执行权限:所有用户
-        功能描述:清屏
-    命令名称:history
-        功能描述:显示历史命令
-
-    命令名称:mkdir
-
-        执行权限:所有用户
-        语法格式:mkdir [-p 递归创建] 目录名
-        功能描述:创建目录
-        使用技巧:
-        1.同时创建多个目录
-            mkdir aaa bbb ccc
-        2.递归创建:
-            mkdir -p a/b/c/d
-    命令名称:touch
-        执行权限:所有用户
-        语法格式:touch 文件名
-        功能描述:创建一个空文件
-        注意:在linux系统中没有扩展名概念,扩展名是给我们用户看的
-        创建多个文件:</code></pre>
     </div>
 
     
@@ -750,7 +1173,7 @@ linux系统中的命令
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript"><span class="nav-number">1.</span> <span class="nav-text">JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#day-1"><span class="nav-number">1.1.</span> <span class="nav-text">day 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-js的几种写入方式"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.js的几种写入方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-找对象-改属性"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.找对象,改属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-js的调错方式"><span class="nav-number">1.1.3.</span> <span class="nav-text">3.js的调错方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-图片跟随鼠标移动"><span class="nav-number">1.1.4.</span> <span class="nav-text">4.图片跟随鼠标移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-js中的运算符"><span class="nav-number">1.1.5.</span> <span class="nav-text">5.js中的运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-2"><span class="nav-number">1.2.</span> <span class="nav-text">day 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-流程控制"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.流程控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-定时器"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.定时器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-按钮移动div"><span class="nav-number">1.2.3.</span> <span class="nav-text">3.按钮移动div</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-点击图片渐变消失"><span class="nav-number">1.2.4.</span> <span class="nav-text">4.点击图片渐变消失</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-js的数据类型"><span class="nav-number">1.2.5.</span> <span class="nav-text">5.js的数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-字符串"><span class="nav-number">1.2.6.</span> <span class="nav-text">6.字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-js中对象的三种定义方式"><span class="nav-number">1.2.7.</span> <span class="nav-text">7.js中对象的三种定义方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-3"><span class="nav-number">1.3.</span> <span class="nav-text">day 3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-js中的函数"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.js中的函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-作用域"><span class="nav-number">1.3.2.</span> <span class="nav-text">2.作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-字符串函数"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.字符串函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-js中的数组对象"><span class="nav-number">1.3.4.</span> <span class="nav-text">4.js中的数组对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-数组函数"><span class="nav-number">1.3.5.</span> <span class="nav-text">5.数组函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-4"><span class="nav-number">1.4.</span> <span class="nav-text">day 4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-操作数组的值"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.操作数组的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-js中的正则"><span class="nav-number">1.4.2.</span> <span class="nav-text">2.js中的正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-时间对象"><span class="nav-number">1.4.3.</span> <span class="nav-text">3.时间对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-数学对象"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.数学对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-概率问题"><span class="nav-number">1.4.5.</span> <span class="nav-text">5.概率问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-事件之前的准备"><span class="nav-number">1.4.6.</span> <span class="nav-text">6.事件之前的准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-事件的绑定"><span class="nav-number">1.4.7.</span> <span class="nav-text">7.事件的绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-this的使用"><span class="nav-number">1.4.8.</span> <span class="nav-text">8.this的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-窗口事件"><span class="nav-number">1.4.9.</span> <span class="nav-text">9.窗口事件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-5"><span class="nav-number">1.5.</span> <span class="nav-text">day 5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-鼠标事件"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.鼠标事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-右键菜单的功能和样式"><span class="nav-number">1.5.2.</span> <span class="nav-text">2.右键菜单的功能和样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-鼠标的其他事件"><span class="nav-number">1.5.3.</span> <span class="nav-text">3.鼠标的其他事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-用鼠标移动div"><span class="nav-number">1.5.4.</span> <span class="nav-text">4.用鼠标移动div</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-选项卡"><span class="nav-number">1.5.5.</span> <span class="nav-text">5.选项卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-键盘事件"><span class="nav-number">1.5.6.</span> <span class="nav-text">6.键盘事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-键盘输入大写字母"><span class="nav-number">1.5.7.</span> <span class="nav-text">7.键盘输入大写字母</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-复合按键"><span class="nav-number">1.5.8.</span> <span class="nav-text">8.复合按键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-demo-验证码"><span class="nav-number">1.5.9.</span> <span class="nav-text">9.demo 验证码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-6"><span class="nav-number">1.6.</span> <span class="nav-text">day 6</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-键盘移动div"><span class="nav-number">1.6.1.</span> <span class="nav-text">1.键盘移动div</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-表单提交事件"><span class="nav-number">1.6.2.</span> <span class="nav-text">2.表单提交事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-城市联动"><span class="nav-number">1.6.3.</span> <span class="nav-text">3.城市联动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-事件冒泡"><span class="nav-number">1.6.4.</span> <span class="nav-text">4.事件冒泡</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-7"><span class="nav-number">1.7.</span> <span class="nav-text">day 7</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-跳转-刷新"><span class="nav-number">1.7.1.</span> <span class="nav-text">1.跳转,刷新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-支付成功-5s返回商户"><span class="nav-number">1.7.2.</span> <span class="nav-text">2.支付成功,5s返回商户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-窗口文档尺寸"><span class="nav-number">1.7.3.</span> <span class="nav-text">3.窗口文档尺寸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-页面前进后退按钮"><span class="nav-number">1.7.4.</span> <span class="nav-text">4.页面前进后退按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-普通-询问-输入弹出框"><span class="nav-number">1.7.5.</span> <span class="nav-text">5.普通,询问,输入弹出框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-小广告"><span class="nav-number">1.7.6.</span> <span class="nav-text">6.小广告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-moveBy-moveTo-resizeTo-resizeBy"><span class="nav-number">1.7.7.</span> <span class="nav-text">7.moveBy,moveTo,resizeTo,resizeBy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-自动阅读"><span class="nav-number">1.7.8.</span> <span class="nav-text">8.自动阅读</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-滚动条"><span class="nav-number">1.7.9.</span> <span class="nav-text">9.滚动条</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-8"><span class="nav-number">1.8.</span> <span class="nav-text">day 8</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-获取元素的方法"><span class="nav-number">1.8.1.</span> <span class="nav-text">1.获取元素的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-购物车按钮添加数量"><span class="nav-number">1.8.2.</span> <span class="nav-text">2.购物车按钮添加数量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-特殊节点"><span class="nav-number">1.8.3.</span> <span class="nav-text">3.特殊节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-向div中写入内容"><span class="nav-number">1.8.4.</span> <span class="nav-text">4.向div中写入内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-js控制表单"><span class="nav-number">1.8.5.</span> <span class="nav-text">5.js控制表单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-全选反选"><span class="nav-number">1.8.6.</span> <span class="nav-text">6.全选反选</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-节点的添加和删除"><span class="nav-number">1.8.7.</span> <span class="nav-text">7.节点的添加和删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-9"><span class="nav-number">1.9.</span> <span class="nav-text">day 9</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-节点的操作"><span class="nav-number">1.9.1.</span> <span class="nav-text">1.节点的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-节点添加和删除的联系"><span class="nav-number">1.9.2.</span> <span class="nav-text">2.节点添加和删除的联系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-淘宝放大镜"><span class="nav-number">1.9.3.</span> <span class="nav-text">3.淘宝放大镜</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-xml"><span class="nav-number">1.9.4.</span> <span class="nav-text">4.xml</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-10"><span class="nav-number">1.10.</span> <span class="nav-text">day 10</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-ajax-基本步骤"><span class="nav-number">1.10.1.</span> <span class="nav-text">1.ajax 基本步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-ajax-的get方式传参"><span class="nav-number">1.10.2.</span> <span class="nav-text">2.ajax 的get方式传参</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-post方式的ajax"><span class="nav-number">1.10.3.</span> <span class="nav-text">3.post方式的ajax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-ajax接取xml的内容"><span class="nav-number">1.10.4.</span> <span class="nav-text">4.ajax接取xml的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-ajax-处理索引数组"><span class="nav-number">1.10.5.</span> <span class="nav-text">5.ajax 处理索引数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-ajax处理关联数组"><span class="nav-number">1.10.6.</span> <span class="nav-text">6.ajax处理关联数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-ajax的小demo"><span class="nav-number">1.10.7.</span> <span class="nav-text">7.ajax的小demo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-ajax封装成对象"><span class="nav-number">1.10.8.</span> <span class="nav-text">8.ajax封装成对象</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Jquery"><span class="nav-number">2.</span> <span class="nav-text">Jquery</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#day-1-1"><span class="nav-number">2.1.</span> <span class="nav-text">day 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-引入jq文件"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.引入jq文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-获取元素"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.获取元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-ajax-的删除"><span class="nav-number">2.1.3.</span> <span class="nav-text">3.ajax 的删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-属性操作"><span class="nav-number">2.1.4.</span> <span class="nav-text">4.属性操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-文本操作"><span class="nav-number">2.1.5.</span> <span class="nav-text">5.文本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-样式的操作"><span class="nav-number">2.1.6.</span> <span class="nav-text">6.样式的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-事件绑定"><span class="nav-number">2.1.7.</span> <span class="nav-text">7.事件绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-jq跟尺寸有关的内容"><span class="nav-number">2.1.8.</span> <span class="nav-text">8.jq跟尺寸有关的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-jq操作表单"><span class="nav-number">2.1.9.</span> <span class="nav-text">9.jq操作表单</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-2-1"><span class="nav-number">2.2.</span> <span class="nav-text">day 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-图片中src浏览器请求的特点"><span class="nav-number">2.2.1.</span> <span class="nav-text">1.图片中src浏览器请求的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-滚动滚轮依次加载显示图片"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.滚动滚轮依次加载显示图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-jq对节点的增删改差"><span class="nav-number">2.2.3.</span> <span class="nav-text">3.jq对节点的增删改差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-jq中的ajax"><span class="nav-number">2.2.4.</span> <span class="nav-text">4.jq中的ajax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jq中阻止事件冒泡"><span class="nav-number">2.2.5.</span> <span class="nav-text">jq中阻止事件冒泡</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-3-1"><span class="nav-number">2.3.</span> <span class="nav-text">day 3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-jq中的一些特效"><span class="nav-number">2.3.1.</span> <span class="nav-text">1.jq中的一些特效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-jq圣旨特效demo"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.jq圣旨特效demo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-打飞机小游戏"><span class="nav-number">2.3.3.</span> <span class="nav-text">3.打飞机小游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-jq全选反选案例"><span class="nav-number">2.3.4.</span> <span class="nav-text">4.jq全选反选案例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PDO"><span class="nav-number">3.</span> <span class="nav-text">PDO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-pdo增删改操作"><span class="nav-number">3.0.1.</span> <span class="nav-text">1.pdo增删改操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-pdo查询操作"><span class="nav-number">3.0.2.</span> <span class="nav-text">2.pdo查询操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-pdo预处理操作"><span class="nav-number">3.0.3.</span> <span class="nav-text">3.pdo预处理操作</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux"><span class="nav-number">4.</span> <span class="nav-text">Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#day1"><span class="nav-number">4.1.</span> <span class="nav-text">day1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-系统的安装"><span class="nav-number">4.1.1.</span> <span class="nav-text">1.系统的安装:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-登陆系统"><span class="nav-number">4.1.2.</span> <span class="nav-text">1.登陆系统:</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript"><span class="nav-number">1.</span> <span class="nav-text">JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#day-1"><span class="nav-number">1.1.</span> <span class="nav-text">day 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-js的几种写入方式"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.js的几种写入方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-找对象-改属性"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.找对象,改属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-js的调错方式"><span class="nav-number">1.1.3.</span> <span class="nav-text">3.js的调错方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-图片跟随鼠标移动"><span class="nav-number">1.1.4.</span> <span class="nav-text">4.图片跟随鼠标移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-js中的运算符"><span class="nav-number">1.1.5.</span> <span class="nav-text">5.js中的运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-2"><span class="nav-number">1.2.</span> <span class="nav-text">day 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-流程控制"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.流程控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-定时器"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.定时器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-按钮移动div"><span class="nav-number">1.2.3.</span> <span class="nav-text">3.按钮移动div</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-点击图片渐变消失"><span class="nav-number">1.2.4.</span> <span class="nav-text">4.点击图片渐变消失</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-js的数据类型"><span class="nav-number">1.2.5.</span> <span class="nav-text">5.js的数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-字符串"><span class="nav-number">1.2.6.</span> <span class="nav-text">6.字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-js中对象的三种定义方式"><span class="nav-number">1.2.7.</span> <span class="nav-text">7.js中对象的三种定义方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-3"><span class="nav-number">1.3.</span> <span class="nav-text">day 3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-js中的函数"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.js中的函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-作用域"><span class="nav-number">1.3.2.</span> <span class="nav-text">2.作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-字符串函数"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.字符串函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-js中的数组对象"><span class="nav-number">1.3.4.</span> <span class="nav-text">4.js中的数组对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-数组函数"><span class="nav-number">1.3.5.</span> <span class="nav-text">5.数组函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-4"><span class="nav-number">1.4.</span> <span class="nav-text">day 4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-操作数组的值"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.操作数组的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-js中的正则"><span class="nav-number">1.4.2.</span> <span class="nav-text">2.js中的正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-时间对象"><span class="nav-number">1.4.3.</span> <span class="nav-text">3.时间对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-数学对象"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.数学对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-概率问题"><span class="nav-number">1.4.5.</span> <span class="nav-text">5.概率问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-事件之前的准备"><span class="nav-number">1.4.6.</span> <span class="nav-text">6.事件之前的准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-事件的绑定"><span class="nav-number">1.4.7.</span> <span class="nav-text">7.事件的绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-this的使用"><span class="nav-number">1.4.8.</span> <span class="nav-text">8.this的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-窗口事件"><span class="nav-number">1.4.9.</span> <span class="nav-text">9.窗口事件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-5"><span class="nav-number">1.5.</span> <span class="nav-text">day 5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-鼠标事件"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.鼠标事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-右键菜单的功能和样式"><span class="nav-number">1.5.2.</span> <span class="nav-text">2.右键菜单的功能和样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-鼠标的其他事件"><span class="nav-number">1.5.3.</span> <span class="nav-text">3.鼠标的其他事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-用鼠标移动div"><span class="nav-number">1.5.4.</span> <span class="nav-text">4.用鼠标移动div</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-选项卡"><span class="nav-number">1.5.5.</span> <span class="nav-text">5.选项卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-键盘事件"><span class="nav-number">1.5.6.</span> <span class="nav-text">6.键盘事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-键盘输入大写字母"><span class="nav-number">1.5.7.</span> <span class="nav-text">7.键盘输入大写字母</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-复合按键"><span class="nav-number">1.5.8.</span> <span class="nav-text">8.复合按键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-demo-验证码"><span class="nav-number">1.5.9.</span> <span class="nav-text">9.demo 验证码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-6"><span class="nav-number">1.6.</span> <span class="nav-text">day 6</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-键盘移动div"><span class="nav-number">1.6.1.</span> <span class="nav-text">1.键盘移动div</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-表单提交事件"><span class="nav-number">1.6.2.</span> <span class="nav-text">2.表单提交事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-城市联动"><span class="nav-number">1.6.3.</span> <span class="nav-text">3.城市联动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-事件冒泡"><span class="nav-number">1.6.4.</span> <span class="nav-text">4.事件冒泡</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-7"><span class="nav-number">1.7.</span> <span class="nav-text">day 7</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-跳转-刷新"><span class="nav-number">1.7.1.</span> <span class="nav-text">1.跳转,刷新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-支付成功-5s返回商户"><span class="nav-number">1.7.2.</span> <span class="nav-text">2.支付成功,5s返回商户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-窗口文档尺寸"><span class="nav-number">1.7.3.</span> <span class="nav-text">3.窗口文档尺寸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-页面前进后退按钮"><span class="nav-number">1.7.4.</span> <span class="nav-text">4.页面前进后退按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-普通-询问-输入弹出框"><span class="nav-number">1.7.5.</span> <span class="nav-text">5.普通,询问,输入弹出框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-小广告"><span class="nav-number">1.7.6.</span> <span class="nav-text">6.小广告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-moveBy-moveTo-resizeTo-resizeBy"><span class="nav-number">1.7.7.</span> <span class="nav-text">7.moveBy,moveTo,resizeTo,resizeBy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-自动阅读"><span class="nav-number">1.7.8.</span> <span class="nav-text">8.自动阅读</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-滚动条"><span class="nav-number">1.7.9.</span> <span class="nav-text">9.滚动条</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-8"><span class="nav-number">1.8.</span> <span class="nav-text">day 8</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-获取元素的方法"><span class="nav-number">1.8.1.</span> <span class="nav-text">1.获取元素的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-购物车按钮添加数量"><span class="nav-number">1.8.2.</span> <span class="nav-text">2.购物车按钮添加数量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-特殊节点"><span class="nav-number">1.8.3.</span> <span class="nav-text">3.特殊节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-向div中写入内容"><span class="nav-number">1.8.4.</span> <span class="nav-text">4.向div中写入内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-js控制表单"><span class="nav-number">1.8.5.</span> <span class="nav-text">5.js控制表单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-全选反选"><span class="nav-number">1.8.6.</span> <span class="nav-text">6.全选反选</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-节点的添加和删除"><span class="nav-number">1.8.7.</span> <span class="nav-text">7.节点的添加和删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-9"><span class="nav-number">1.9.</span> <span class="nav-text">day 9</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-节点的操作"><span class="nav-number">1.9.1.</span> <span class="nav-text">1.节点的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-节点添加和删除的联系"><span class="nav-number">1.9.2.</span> <span class="nav-text">2.节点添加和删除的联系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-淘宝放大镜"><span class="nav-number">1.9.3.</span> <span class="nav-text">3.淘宝放大镜</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-xml"><span class="nav-number">1.9.4.</span> <span class="nav-text">4.xml</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-10"><span class="nav-number">1.10.</span> <span class="nav-text">day 10</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-ajax-基本步骤"><span class="nav-number">1.10.1.</span> <span class="nav-text">1.ajax 基本步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-ajax-的get方式传参"><span class="nav-number">1.10.2.</span> <span class="nav-text">2.ajax 的get方式传参</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-post方式的ajax"><span class="nav-number">1.10.3.</span> <span class="nav-text">3.post方式的ajax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-ajax接取xml的内容"><span class="nav-number">1.10.4.</span> <span class="nav-text">4.ajax接取xml的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-ajax-处理索引数组"><span class="nav-number">1.10.5.</span> <span class="nav-text">5.ajax 处理索引数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-ajax处理关联数组"><span class="nav-number">1.10.6.</span> <span class="nav-text">6.ajax处理关联数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-ajax的小demo"><span class="nav-number">1.10.7.</span> <span class="nav-text">7.ajax的小demo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-ajax封装成对象"><span class="nav-number">1.10.8.</span> <span class="nav-text">8.ajax封装成对象</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Jquery"><span class="nav-number">2.</span> <span class="nav-text">Jquery</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#day-1-1"><span class="nav-number">2.1.</span> <span class="nav-text">day 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-引入jq文件"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.引入jq文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-获取元素"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.获取元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-ajax-的删除"><span class="nav-number">2.1.3.</span> <span class="nav-text">3.ajax 的删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-属性操作"><span class="nav-number">2.1.4.</span> <span class="nav-text">4.属性操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-文本操作"><span class="nav-number">2.1.5.</span> <span class="nav-text">5.文本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-样式的操作"><span class="nav-number">2.1.6.</span> <span class="nav-text">6.样式的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-事件绑定"><span class="nav-number">2.1.7.</span> <span class="nav-text">7.事件绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-jq跟尺寸有关的内容"><span class="nav-number">2.1.8.</span> <span class="nav-text">8.jq跟尺寸有关的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-jq操作表单"><span class="nav-number">2.1.9.</span> <span class="nav-text">9.jq操作表单</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-2-1"><span class="nav-number">2.2.</span> <span class="nav-text">day 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-图片中src浏览器请求的特点"><span class="nav-number">2.2.1.</span> <span class="nav-text">1.图片中src浏览器请求的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-滚动滚轮依次加载显示图片"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.滚动滚轮依次加载显示图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-jq对节点的增删改差"><span class="nav-number">2.2.3.</span> <span class="nav-text">3.jq对节点的增删改差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-jq中的ajax"><span class="nav-number">2.2.4.</span> <span class="nav-text">4.jq中的ajax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jq中阻止事件冒泡"><span class="nav-number">2.2.5.</span> <span class="nav-text">jq中阻止事件冒泡</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-3-1"><span class="nav-number">2.3.</span> <span class="nav-text">day 3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-jq中的一些特效"><span class="nav-number">2.3.1.</span> <span class="nav-text">1.jq中的一些特效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-jq圣旨特效demo"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.jq圣旨特效demo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-打飞机小游戏"><span class="nav-number">2.3.3.</span> <span class="nav-text">3.打飞机小游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-jq全选反选案例"><span class="nav-number">2.3.4.</span> <span class="nav-text">4.jq全选反选案例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PDO"><span class="nav-number">3.</span> <span class="nav-text">PDO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-pdo增删改操作"><span class="nav-number">3.0.1.</span> <span class="nav-text">1.pdo增删改操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-pdo查询操作"><span class="nav-number">3.0.2.</span> <span class="nav-text">2.pdo查询操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-pdo预处理操作"><span class="nav-number">3.0.3.</span> <span class="nav-text">3.pdo预处理操作</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux"><span class="nav-number">4.</span> <span class="nav-text">Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#day1"><span class="nav-number">4.1.</span> <span class="nav-text">day1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-系统的安装"><span class="nav-number">4.1.1.</span> <span class="nav-text">1.系统的安装:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-登陆系统"><span class="nav-number">4.1.2.</span> <span class="nav-text">1.登陆系统:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day2"><span class="nav-number">4.2.</span> <span class="nav-text">day2</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

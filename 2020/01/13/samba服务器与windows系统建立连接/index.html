@@ -47,17 +47,21 @@
   };
 </script>
 
-  <meta name="description" content="This is MyBlog  Notes">
-<meta property="og:type" content="website">
-<meta property="og:title" content="BLOG">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="windows系统操作linux系统内文件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="samba服务器与windows系统建立连接">
+<meta property="og:url" content="http://yoursite.com/2020/01/13/samba%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8Ewindows%E7%B3%BB%E7%BB%9F%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="This is MyBlog  Notes">
+<meta property="og:description" content="windows系统操作linux系统内文件">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/images/sb.png">
+<meta property="article:published_time" content="2020-01-13T10:51:52.096Z">
+<meta property="article:modified_time" content="2020-01-13T11:02:46.004Z">
 <meta property="article:author" content="Forbes-v">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/sb.png">
 
-<link rel="canonical" href="http://yoursite.com/archives/page/2/">
+<link rel="canonical" href="http://yoursite.com/2020/01/13/samba%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8Ewindows%E7%B3%BB%E7%BB%9F%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5/">
 
 
 <script id="page-configurations">
@@ -65,11 +69,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title>归档 | BLOG</title>
+  <title>samba服务器与windows系统建立连接 | BLOG</title>
   
 
 
@@ -202,316 +206,85 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        
-        <span class="collection-header">还行! 目前共计 34 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/13/samba%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8Ewindows%E7%B3%BB%E7%BB%9F%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577461266205&di=1c6b53212223ecf3fd4de5ccdc1e037c&imgtype=0&src=http%3A%2F%2Fwww.17qq.com%2Fimg_qqtouxiang%2F49052337.jpeg">
+      <meta itemprop="name" content="Forbes-v">
+      <meta itemprop="description" content="This is MyBlog  Notes">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          samba服务器与windows系统建立连接
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-13 10:51:52 / 修改时间：11:02:46" itemprop="dateCreated datePublished" datetime="2020-01-13T10:51:52Z">2020-01-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
+        <p>windows系统操作linux系统内文件</p>
+<a id="more"></a>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">1.我们需要连接linux</span><br><span class="line">samba服务器</span><br><span class="line">	window文件共享</span><br><span class="line">	win和linux之间没有能实现资源共享</span><br><span class="line">samba服务器默认是没有安装的</span><br><span class="line">	通过yum安装samba服务器</span><br><span class="line">	1.查看samba服务器是否安装</span><br><span class="line">		rpm -q samba</span><br><span class="line">	2.安装 yum -y install samba</span><br><span class="line">		[root@user &#x2F;]# rpm -q samba</span><br><span class="line">		samba-3.6.23-53.el6_10.i686</span><br><span class="line">	3.安装samba服务器后,需要重新启动samba服务</span><br><span class="line">		service smb start</span><br><span class="line">		同时还需要启动 nmb</span><br><span class="line">		service nmb start</span><br><span class="line">		</span><br><span class="line">		重启启动服务  使用 service smb|nmb resatrt</span><br><span class="line">		</span><br><span class="line">	4.用户管理</span><br><span class="line">		1.我们需要添加一个系统用户(必须是系统用户)</span><br><span class="line">			添加linux系统用户 useradd lvle</span><br><span class="line">			passwd 用户名</span><br><span class="line">		2.把系统用户添加到samba中</span><br><span class="line">			smbpasswd -a 用户名(系统用户)</span><br><span class="line">			系统用户的密码和samba用户的密码不是同一个密码</span><br><span class="line">			</span><br><span class="line">			pdbedit - x 用户名  删除samba用户</span><br><span class="line">		3.使用window连接我们的samba用户的共享目录</span><br><span class="line">			在window系统中按 win+r  输入\\ip地址</span><br><span class="line">			</span><br><span class="line">		4.如果配置好samba后,在按win+r 输出 \\ip地址如果出现一直报用户名或密码不正确</span><br><span class="line">			有三种情况:</span><br><span class="line">				1.samba账号没有添加成功</span><br><span class="line">				2.linux系统中的防火墙没有关闭</span><br><span class="line">				3.传输协议出现问题:(见下图)</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-03T02:19:40Z"
-              content="2020-01-03">
-          01-03
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/01/03/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AE%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E5%9F%9F%E5%90%8D/" itemprop="url">
-            <span itemprop="name">linux环境下配置虚拟主机域名</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-03T02:10:40Z"
-              content="2020-01-03">
-          01-03
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/01/03/linux%E8%AE%BE%E7%BD%AEApache%E5%90%AF%E5%81%9C%E5%88%AB%E5%90%8D,%E4%BF%AE%E6%94%B9%E7%AB%AF%E5%8F%A3,%E4%BF%AE%E6%94%B9%E7%BD%91%E7%AB%99%E6%A0%B9%E7%9B%AE%E5%BD%95/" itemprop="url">
-            <span itemprop="name">linux设置Apache启停别名,修改端口,修改网站根目录</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-02T14:12:29Z"
-              content="2020-01-02">
-          01-02
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/01/02/Navicat%E4%B8%8D%E8%83%BD%E5%A4%9F%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95Linux%E4%B8%8A%E7%9A%84mysql%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url">
-            <span itemprop="name">Navicat不能够远程登录Linux上的mysql数据库</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-02T13:14:58Z"
-              content="2020-01-02">
-          01-02
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/01/02/lamp%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" itemprop="url">
-            <span itemprop="name">lamp环境安装</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-31T03:37:53Z"
-              content="2019-12-31">
-          12-31
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/12/31/Python%E7%88%AC%E8%99%AB/" itemprop="url">
-            <span itemprop="name">Python爬虫</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-30T14:01:07Z"
-              content="2019-12-30">
-          12-30
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/12/30/win7%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEApache%E4%BD%BF%E6%9C%AC%E5%9C%B0PHP%E9%A1%B9%E7%9B%AE%E4%BE%9B%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E5%85%B6%E4%BB%96%E7%94%A8%E6%88%B7%E8%AE%BF%E9%97%AE%E6%96%B9%E6%B3%95/" itemprop="url">
-            <span itemprop="name">win7环境下配置Apache使本地PHP项目供局域网内其他用户访问方法</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-28T06:33:09Z"
-              content="2019-12-28">
-          12-28
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/12/28/Linux%E5%AE%89%E8%A3%85_%E5%91%BD%E4%BB%A4%E7%89%88/" itemprop="url">
-            <span itemprop="name">Linux安装_命令版</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-28T05:50:49Z"
-              content="2019-12-28">
-          12-28
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/12/28/vm12%E4%B8%8Elinux6%E7%9A%84%E5%AE%89%E8%A3%85(1)/" itemprop="url">
-            <span itemprop="name">vm12与linux6的安装(1)</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-28T05:46:38Z"
-              content="2019-12-28">
-          12-28
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/12/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/" itemprop="url">
-            <span itemprop="name">学习资料</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-28T05:46:04Z"
-              content="2019-12-28">
-          12-28
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/12/28/%E6%97%A5%E5%B8%B8%E6%80%BB%E7%BB%93/" itemprop="url">
-            <span itemprop="name">日常总结</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-28T05:45:46Z"
-              content="2019-12-28">
-          12-28
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/12/28/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" itemprop="url">
-            <span itemprop="name">基础知识</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-28T03:58:50Z"
-              content="2019-12-28">
-          12-28
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/12/28/wamp%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" itemprop="url">
-            <span itemprop="name">wamp环境配置</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-28T03:53:34Z"
-              content="2019-12-28">
-          12-28
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/12/28/%E4%BD%BF%E7%94%A8hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" itemprop="url">
-            <span itemprop="name">使用hexo+github搭建个人博客</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-28T03:37:06Z"
-              content="2019-12-28">
-          12-28
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/12/28/Git%E7%9A%84%E4%BD%BF%E7%94%A8--%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E5%88%B0Github/" itemprop="url">
-            <span itemprop="name">Git的使用--两种方法上传本地项目到Github</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
+<p><img src="/images/sb.png" alt="sb"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">samba默认的共享目录是以samba用户名的目录为共享目录</span><br><span class="line">			自定义配置一个samba的共享目录</span><br><span class="line">				&#x2F;www</span><br><span class="line">				</span><br><span class="line">			配置samba的配置文件</span><br><span class="line">				[root@user www]# vi &#x2F;etc&#x2F;samba&#x2F;smb.conf</span><br><span class="line">				最后面增加一段</span><br><span class="line">                    [windysai]</span><br><span class="line">                    comment &#x3D; share for users      </span><br><span class="line">                    path &#x3D; &#x2F;tmp&#x2F;sambadir         </span><br><span class="line">                    browseable &#x3D; yes   </span><br><span class="line">                    writable &#x3D; yes    </span><br><span class="line">                    public &#x3D; no   </span><br><span class="line">                    参数说明：</span><br><span class="line">                    （a）comment &#x3D; share for users：自定义描述</span><br><span class="line">                    （b）path &#x3D; &#x2F;tmp&#x2F;sambadir ：共享目录</span><br><span class="line">                    （c）browseable &#x3D; yes： 可浏览</span><br><span class="line">                    （d）writetable &#x3D; yes ：可写</span><br><span class="line">                    （e）public &#x3D; no：不公共</span><br></pre></td></tr></table></figure>
 
 
     </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/01/11/vue-05-%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E4%B8%8E%E4%BE%A6%E5%90%AC%E5%99%A8/" rel="prev" title="vue-05-计算属性与侦听器">
+      <i class="fa fa-chevron-left"></i> vue-05-计算属性与侦听器
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
-  
-  
-  
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-  </nav>
-
 
 
           </div>
